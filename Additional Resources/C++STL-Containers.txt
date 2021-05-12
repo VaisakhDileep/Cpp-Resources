@@ -1,0 +1,28 @@
+						-------------------- STL Containers --------------------
+STL containers are Data Structures that can store objects of almost any type. They are template-based classes.
+Each container has member functions. Some are specific to the container, others are available to all containers.
+Each container has an associated header file --#include<container_type>--.
+
+When using objects make sure the object is copyable and assignable, also make it moveable for efficiency. Ordered associative containers must be able to compare elements(operator< , operator==).
+
+Some of the functions that are common to all containers:
+1. Default constructor : initializes an empty container.
+2. Overloaded constructor : initializes a container with multiple options.
+3. Copy constructor : initializes a container as a copy of another container.
+4. Move constructor : moves existing container to a new container.
+5. Destructor : destroys a container.
+6. Copy assignment(operator=) : copy one container to another.
+7. Move assignment(operator=) : move one container to another.
+8. size : returns the number of elements in the container.
+9. empty : checks if the container is empty or not(returns bool).
+10. insert : insert an element into the container.
+11. operator< and operator<= : compares contents of two containers(returns bool).
+12. operator> and operator>= : compares contents of two containers(returns bool).
+13. operator== and operator!= : checks if the contents of the two containers are equal or not.
+14. swap : swap the elements of two containers.
+15. erase : remove element(s) from the container.
+16. clear : remove all elements from the container.
+17. begin and end : returns iterators to first element or last element.
+18. rbegin and rend : returns reverse iterators to first element or last element.
+19. cbegin and cend : returns constant iterators to first element or last element.
+20. crbegin and crend : returns constant reverse iterators to first element or last element.

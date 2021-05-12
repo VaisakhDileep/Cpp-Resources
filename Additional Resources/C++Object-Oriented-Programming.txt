@@ -1,0 +1,10 @@
+Procedural Programming: Focus is on process or action that a program takes. Program is typically a collection of functions.
+						Data is declared separately. Data is passed as arguments in function.
+
+Object-Oriented Programming: Models software in terms of classes and objects.
+
+Encapsulation: Object contains data AND operations that work on that data.
+Information-hiding: Implementation-specific logic can be hidden.
+Reusability: Easier to reuse classes in other applications.
+Inheritance: Can create new classes in term of existing classes.
+Polymorphism: Ability of object to take on multiple forms(parent class referring to child class). Any object that satisfies more than one IS-A relationship is polymorphic in nature.
