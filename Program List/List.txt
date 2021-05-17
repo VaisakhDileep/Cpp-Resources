@@ -94,21 +94,24 @@ Program093: This program helps to understand how to read a text file in C++.
 Program094: This program helps to understand how to write to a text file in C++.
 Program095: This program helps to understand how to copy and paste the contents of a file in C++.
 Program096: This program helps to understand string streams in C++.
-Program097: This program helps to understand Standard Template Library in C++.
+Program097[stl]: This program helps to understand Standard Template Library in C++.
 Program098: This program helps to understand generic programming using Macros in C++.
 Program099: This program helps to understand generic programming using Function Templates in C++.
 Program100: This program helps to understand generic programming using Class Templates in C++.
-Program101: This program helps to understand STL iterators in C++.
+Program101[stl]: This program helps to understand STL iterators in C++.
 Program102: This program helps to understand functors(function objects) in C++.
-Program103: This program helps to understand STL algorithms in C++.
+Program103[stl]: This program helps to understand STL algorithms in C++.
 Program104: This program helps to differentiate between global namespace and named namespace in C++.
-Program105: This program helps to understand std::array in STL sequence containers in C++.
-Program106: This program helps to understand std::vector in STL sequence containers in C++.
-Program107: This program helps to understand std::deque in STL sequence containers in C++.
-Program108: This program helps to understand std::list in STL sequence containers in C++.
-Program109: This program helps to understand std::forward_list in STL sequence containers in C++.
-Program110: This program helps to understand std::set in STL associative containers in C++.
-Program111: This program helps to understand std::map in STL associative containers in C++.
-Program112: This program helps to understand std::stack in STL container adapters in C++.
-Program113: This program helps to understand std::queue in STL container adapters in C++.
-Program114: This program helps to understand std::priority_queue in STL container adapters in C++.
+Program105[stl]: This program helps to understand std::array in STL sequence containers in C++.
+Program106[stl]: This program helps to understand std::vector in STL sequence containers in C++.
+Program107[stl]: This program helps to understand std::deque in STL sequence containers in C++.
+Program108[stl]: This program helps to understand std::list in STL sequence containers in C++.
+Program109[stl]: This program helps to understand std::forward_list in STL sequence containers in C++.
+Program110[stl]: This program helps to understand std::set in STL associative containers in C++.
+Program111[stl]: This program helps to understand std::map in STL associative containers in C++.
+Program112[stl]: This program helps to understand std::stack in STL container adapters in C++.
+Program113[stl]: This program helps to understand std::queue in STL container adapters in C++.
+Program114[stl]: This program helps to understand std::priority_queue in STL container adapters in C++.
+Program115[stl]: This program helps to understand std::unique function in C++.
+Program116[stl]: This program helps to understand std::distance function in C++.
+Program117[stl]: This program helps to understand std::tuple in STL container adapters in C++.
