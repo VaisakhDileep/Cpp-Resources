@@ -18,5 +18,5 @@ int main()
 
 	cout<<"tuple_element: "<<get<0>(tuple_element)<<", "<<get<1>(tuple_element);
 
-	return 0;
+	re;
 }
