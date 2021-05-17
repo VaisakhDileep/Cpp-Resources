@@ -18,5 +18,7 @@ int main()
 
 	cout<<"tuple_element: "<<get<0>(tuple_element)<<", "<<get<1>(tuple_element);
 
-	re;
+	// Just a simple comment
+
+	return 0;
 }
