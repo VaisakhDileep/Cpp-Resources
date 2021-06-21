@@ -39,6 +39,27 @@ int main()
 
 	cout<<oss.str();
 
+// The below piece of code explains how to format an input string:
+	string edge {"{10, 2}"}; // Assuming this is the input string.
+
+	int vertex_1 {}, vertex_2 {};
+
+	istringstream edge_iss {edge};
+
+	cout<<"edges_iss.peek(): "<<static_cast<char>(edge_iss.peek())<<"\n"; // peek() returns the next character in the input sequence, without extracting it.
+
+	edge_iss.ignore(); // This will ignore the next character in the input sequence, which is "{".
+
+	edge_iss>>vertex_1;
+
+	edge_iss.ignore(); // This will ignore ','.
+
+	edge_iss>>vertex_2;
+
+	cout<<"vertex 1: "<<vertex_1<<"\n"<<"vertex 2: "<<vertex_2<<"\n\n";
+
+	edge_iss.str(""); // This will clear the "istringstream" object.
+
 // The below piece of code explains how data validation works:
 	int value {};
 

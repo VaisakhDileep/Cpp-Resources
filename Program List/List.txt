@@ -115,3 +115,5 @@ Program114[stl]: This program helps to understand std::priority_queue in STL con
 Program115[stl]: This program helps to understand std::unique function in C++.
 Program116[stl]: This program helps to understand std::distance function in C++.
 Program117[stl]: This program helps to understand std::tuple in STL container adapters in C++.
+Program118: This program helps to understand how to pass a variable number of arguments to a function in C++.
+Program119: This program helps to understand unions in C++.
