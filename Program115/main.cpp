@@ -14,7 +14,7 @@ using namespace std;
 
 bool check_duplicate_ones(int a, int b)
 {
-	if(a == b == 1)
+	if((a == b) and (b == 1))
 	{
 		return true;
 	}
@@ -56,7 +56,7 @@ Syntax for std::unique():
 	{
 		cout<<value<<" ";
 	}
-	cout<<"]\n";
+	cout<<"]\n\n";
 
 /*
 Syntax for using pre-defined function along with std::unique():
@@ -71,12 +71,19 @@ Syntax for using pre-defined function along with std::unique():
 */
 	vector<int> bits {1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1};
 
-	vector<int>::iterator bits_it {unique(bits.begin(), bits.end())};
+	cout<<"bits: [ ";
+	for(auto bit : bits)
+	{
+		cout<<bit<<" ";
+	}
+	cout<<"]\n";
+
+	vector<int>::iterator bits_it {unique(bits.begin(), bits.end(), check_duplicate_ones)}; // This will remove only the duplicate 1's.
 
 	bits.resize(distance(bits.begin(), bits_it));
 
-	cout<<"bits: [ ";
-	for(auto bit: bits)
+	cout<<"bits[without sorting]: [ ";
+	for(auto bit : bits)
 	{
 		cout<<bit<<" ";
 	}

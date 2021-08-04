@@ -60,7 +60,7 @@ int main()
 
 	char char_var {};
 
-	tie(int_var, char_var) = pair_1; // "tie()" is available in the tuple header library. It will bind each variable to the corresponding element in the pair.
+	tie(int_var, char_var) = pair_1; // "tie()" is available in the tuple header file. It will bind each variable to the corresponding element in the pair.
 
 	cout<<"int_var : "<<int_var<<"\n"<<"char_var: "<<char_var<<"\n";
 
