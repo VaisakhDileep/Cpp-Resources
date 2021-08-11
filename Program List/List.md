@@ -120,3 +120,4 @@ Program119: This [program helps to understand unions in C++.](../Program119/main
 Program120[stl]: [This program helps to understand how to convert a STL container into a heap data structure in STL algorithms in C++.](../Program120/main.cpp)<br>
 Program121: [This program helps to understand std::pair in C++.](../Program121/main.cpp)<br>
 Program122: [This program helps to understand goto statement in C++.](../Program122/main.cpp)<br>
+Program123: [This program helps to understand how to declare positive infinity and negative infinity in C++.](../Program123/main.cpp)<br>
