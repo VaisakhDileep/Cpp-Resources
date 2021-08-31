@@ -88,6 +88,8 @@ int main()
 
 	// Lisa.age = 8; // As usual this will give an error because "Lisa" is a constant object.
 
+	// Lisa.set_name("Lisa Simpson"); // This will given an error since we haven't included "const" in the member function declaration.
+
 	cout<<"Name: "<<Lisa.get_name()<<"\n\n"; // This will work here.
 
 	return 0;

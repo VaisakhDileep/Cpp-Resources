@@ -18,8 +18,8 @@ public:
 
 	~stringv2(); // Destructor
 
-	stringv2 &operator=(const stringv2 &rhs); // Copy assignment
-	stringv2 &operator=(stringv2 &&rhs); // Move assignment
+	stringv2& operator=(const stringv2 &rhs); // Copy assignment
+	stringv2& operator=(stringv2 &&rhs); // Move assignment
 
 	stringv2 operator-() const; // Unary - Operator ---> Used to convert to lower-case representation.
 	stringv2 operator+() const; // Unary + Operator ---> Used to convert to upper-case representation.

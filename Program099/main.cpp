@@ -41,6 +41,17 @@ void display(T1 data1, T2 data2)
 	cout<<"Data 2: "<<data2<<"\n";
 }
 
+template<typename T1, typename T2>
+void function(T1 data1, T2 data2)
+{
+	cout<<"Template function called.";
+}
+
+void function(int data1, int data2)
+{
+	cout<<"Non-Template function called.";
+}
+
 int main()
 {
 // C++ template is a blueprint and it is compiled during compile-time and not run-time. Compiler generates the appropriate function / class from the blueprint. It is used to achieve Generic-programming / Meta-programming.
@@ -62,6 +73,22 @@ int main()
 
 	cout<<"display<int, Person>(num1, Homer): \n";
 	display<int, Person>(num1, Homer);
+	cout<<"\n";
+
+	cout<<"function(9, 10): "; // Compiler always priorities the non-template function over the template function.
+	function(9, 10);
+	cout<<"\n";
+
+	cout<<"function('a', 'b'): "; // Here the compiler will not bother with type casting, so it priorities the template function over the non-template function.
+	function('a', 'b');
+	cout<<"\n";
+
+	cout<<"function(1, 'a'): "; // Here the compiler will type cast one of the parameter so as to call the non-template version.
+	function(1, 'a');
+	cout<<"\n";
+
+	cout<<"function('a', 1): "; // Here the compiler will type cast one of the parameter so as to call the non-template version.
+	function('a', 1);
 	cout<<"\n";
 
 	return 0;
