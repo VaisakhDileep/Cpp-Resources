@@ -1,12 +1,12 @@
-#ifndef HORN_HPP // This will check if we have included the header file already.
+#ifndef _HORN_HPP_ // This will check if we have included the header file already.
 
-#define HORN_HPP
+#define _HORN_HPP_
 
 #include<iostream>
 
 using namespace std;
 
-class horn_1
+class Horn_1
 {
 public:
 	void say()

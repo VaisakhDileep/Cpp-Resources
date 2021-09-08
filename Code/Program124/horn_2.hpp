@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class horn_2
+class Horn_2
 {
 public:
 	void say()

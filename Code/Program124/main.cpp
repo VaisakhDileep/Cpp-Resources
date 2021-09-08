@@ -6,19 +6,19 @@ Description : This program helps to understand header guards in C++.
 
 #include<iostream>
 
-#include "car_1.hpp" // "car_1.hpp" also includes "horn_1.hpp".
+#include "Car_1.hpp" // "Car_1.hpp" also includes "Horn_1.hpp".
 
-#include "horn_1.hpp" // Inorder to prevent "horn_1.hpp" from begin included again, we need to provide a header guard for "horn_1.hpp".
+#include "Horn_1.hpp" // Inorder to prevent "Horn_1.hpp" from begin included again, we need to provide a header guard for "Horn_1.hpp".
 
-#include "car_2.hpp" // "car_2.hpp" also includes "horn_2.hpp".
+#include "Car_2.hpp" // "Car_2.hpp" also includes "Horn_2.hpp".
 
-#include "horn_2.hpp" // Inorder to prevent "horn_2.hpp" from begin included again, we need to provide a header guard for "horn_2.hpp".
+#include "Horn_2.hpp" // Inorder to prevent "Horn_2.hpp" from begin included again, we need to provide a header guard for "Horn_2.hpp".
 
 using namespace std;
 
 int main()
 {
-	car_1 A {};
+	Car_1 A {};
 
 	A.say();
 
@@ -27,7 +27,7 @@ int main()
 	A.H.say();
 	cout<<"\n";
 
-	car_2 B {};
+	Car_2 B {};
 
 	B.say();
 
