@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date		: 3, July, 2021
-Description : This program helps to understand how to convert a STL container into a heap data structure in STL algorithms in C++.
+Description : This program helps to understand how to convert a STL container into a heap data structure in C++.
 */
 
 #include<iostream>

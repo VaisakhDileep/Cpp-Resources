@@ -117,9 +117,10 @@ Program116[stl]: [This program helps to understand std::distance function in C++
 Program117[stl]: [This program helps to understand std::tuple in STL container adapters in C++.](../Program117/main.cpp)<br>
 Program118: [This program helps to understand how to pass a variable number of arguments to a function in C++.](../Program118/main.cpp)<br>
 Program119: This [program helps to understand unions in C++.](../Program119/main.cpp)<br>
-Program120[stl]: [This program helps to understand how to convert a STL container into a heap data structure in STL algorithms in C++.](../Program120/main.cpp)<br>
+Program120[stl]: [This program helps to understand how to convert a STL container into a heap data structure in C++.](../Program120/main.cpp)<br>
 Program121: [This program helps to understand std::pair in C++.](../Program121/main.cpp)<br>
-Program122: [This program helps to understand goto statement in C++.](../Program122/main.cpp)<br>
+Program122: [This program helps to understand the goto statement in C++.](../Program122/main.cpp)<br>
 Program123: [This program helps to understand how to declare positive infinity and negative infinity in C++.](../Program123/main.cpp)<br>
 Program124: [This program helps to understand header guards in C++.](../Program124/main.cpp)<br>
 Program125: [This program helps to understand make files in C++.](../Program125/main.cpp)<br>
+Program126[stl]: [This program helps to understand std::random_shuffle function in C++.](../Program126/main.cpp)<br>
