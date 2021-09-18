@@ -126,7 +126,7 @@ For some functions in STL algorithms we need to provide some extra informations 
 	cout<<"]\n";
 
 	cout<<"Result 3: [ ";
-	for_each(even_numbers.begin(), even_numbers.end(), [](int x) { cout<<(x * x)<<" "; }); // Here we are passing a lambda function.
+	for_each(even_numbers.begin(), even_numbers.end(), [](int x) {cout<<(x * x)<<" "; }); // Here we are passing a lambda function.
 	cout<<"]\n\n";
 
 	vector<int> data {1, 3, 4, 1, 2, 1, 1, 2, 1, 6, 1, 0, 2};

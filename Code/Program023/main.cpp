@@ -28,6 +28,8 @@ int main()
 	cout<<"The floor of "<<num<<" is: "<<floor(num)<<"\n";
 	cout<<"The round of "<<num<<" is: "<<round(num)<<"\n\n";
 
+	cout<<"absolute value of -1: "<<abs(-1.2)<<"\n\n";
+
 	double power {};
 
 	cout<<"Enter a power to raise "<<num<<": ";

@@ -20,7 +20,7 @@ public:
 class Derived_1: public Base
 {
 public:
-	virtual void say_hello() // The signatures don't match(we have a "const" specifier in Base's class method).
+	virtual void say_hello() // The signatures don't match(we have a "const" specifier in Base's class method), so we can't use the override specifier here.
 	{
 		cout<<"Hello - You are inside the Derived 1 class.\n";
 	}

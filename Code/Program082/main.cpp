@@ -62,7 +62,7 @@ Properties of shared_ptr:
 	cout<<"Use count[pointer_1]: "<<pointer_1.use_count()<<"\n";
 	cout<<"Use count[pointer_2]: "<<pointer_2.use_count()<<"\n\n";
 
-	pointer_2.reset();
+	pointer_2.reset(); // "pointer_2" will now point nowhere.
 
 	cout<<"Use count[pointer_1]: "<<pointer_1.use_count()<<"\n";
 	cout<<"Use count[pointer_2]: "<<pointer_2.use_count()<<"\n\n";
