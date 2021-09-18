@@ -125,3 +125,4 @@ Program124: [This program helps to understand header guards in C++.](../Program1
 Program125: [This program helps to understand make files in C++.](../Program125/main.cpp)<br>
 Program126[stl]: [This program helps to understand std::random_shuffle function in C++.](../Program126/main.cpp)<br>
 Program127: [This program helps to understand lambda expressions in C++.](../Program127/main.cpp)<br>
+Program128: [This program helps to understand typedef in C++.](../Program128/main.cpp)<br>
