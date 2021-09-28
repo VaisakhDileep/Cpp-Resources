@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 25, January, 2021
+Date        : 25, January, 2021
 Description : This program helps to understand custom deleters(smart_pointer) in C++.
 */
 
@@ -13,36 +13,36 @@ using namespace std;
 class Test
 {
 private:
-	int data;
+    int data;
 public:
-	Test() // No-args Constructor
-		: data {0}
-	{
-		cout<<"No-args constructor called for Test.\n";
-	}
+    Test() // No-args Constructor
+        : data {0}
+    {
+        cout<<"No-args constructor called for Test.\n";
+    }
 
-	Test(int data) // Overloaded Constructor
-		: data {data}
-	{
-		cout<<"Overloaded constructor called for Test ["<<data<<"]\n";
-	}
+    Test(int data) // Overloaded Constructor
+        : data {data}
+    {
+        cout<<"Overloaded constructor called for Test ["<<data<<"]\n";
+    }
 
-	int get_data() const
-	{
-		return data;
-	}
+    int get_data() const
+    {
+        return data;
+    }
 
-	~Test() // Destructor
-	{
-		cout<<"Destructor called for Test ["<<data<<"]\n";
-	}
+    ~Test() // Destructor
+    {
+        cout<<"Destructor called for Test ["<<data<<"]\n";
+    }
 };
 
 void delete_function(Test *raw_pointer)
 {
-	cout<<"Using custom deleter function.\n";
+    cout<<"Using custom deleter function.\n";
 
-	delete raw_pointer;
+    delete raw_pointer;
 }
 
 int main()
@@ -54,9 +54,9 @@ Syntax for using custom deleters(using functions):
 
 void deleter_function(Class_Name *raw_pointer) // "Class_Name" could also be "Data_Type".
 {
-	// ... Code ...
+    // ... Code ...
 
-	delete raw_pointer; // Make sure to delete.
+    delete raw_pointer; // Make sure to delete.
 }
 
 shared_ptr<Class_Name> ptr {new Class_Name {}, deleter_function}; // Creating a shared pointer object. "Class_Name" could also be "Data_Type".
@@ -66,21 +66,21 @@ shared_ptr<Class_Name> ptr {new Class_Name {}, deleter_function}; // Creating a 
 Syntax for using custom deleters(using lambdas):
 
 shared_ptr<Class_Name> ptr(new Class_Name {100}, [](Class_Name *raw_pointer) {
-	// ... Code ...
+    // ... Code ...
 
-	delete raw_pointer; }); // "Class_Name" could also be "Data_Type".
+    delete raw_pointer; }); // "Class_Name" could also be "Data_Type".
 */
-	{
-		shared_ptr<Test> test_1 {new Test {100}, delete_function};
-	}
+    {
+        shared_ptr<Test> test_1 {new Test {100}, delete_function};
+    }
 
-	cout<<"\n";
+    cout<<"\n";
 
-	{
-		shared_ptr<Test> test_2 {new Test {200}, [](Test *raw_pointer) {
-			cout<<"Using custom deleter lambda function.\n";
-			delete raw_pointer; }};
-	}
+    {
+        shared_ptr<Test> test_2 {new Test {200}, [](Test *raw_pointer) {
+            cout<<"Using custom deleter lambda function.\n";
+            delete raw_pointer; }};
+    }
 
-	return 0;
+    return 0;
 }

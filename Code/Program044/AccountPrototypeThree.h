@@ -4,10 +4,10 @@
 class AccountPrototypeThree
 {
 private:
-	double balance;
+    double balance;
 public:
-	void set_balance(double account_balance);
-	double get_balance();
+    void set_balance(double account_balance);
+    double get_balance();
 }; // This is the class declaration.
 
 #endif

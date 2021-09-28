@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 19, December, 2020
+Date        : 19, December, 2020
 Description : This program helps to understand infinite loops in C++.
 */
 
@@ -12,21 +12,21 @@ int main()
 {
 
 /*
-	for(;;)
-		cout<<"This will print forever.\n"; // This is an example of infinite for loop.
+    for(;;)
+        cout<<"This will print forever.\n"; // This is an example of infinite for loop.
 */
 
 /*
-	while(true)
-		cout<<"This will print forever.\n"; // This is an example of infinite while loop.
+    while(true)
+        cout<<"This will print forever.\n"; // This is an example of infinite while loop.
 */
 
 /*
-	do
-	{
-		cout<<"This will print forever.\n"; // This is an example of infinite do-while loop.
-	}while(true);
+    do
+    {
+        cout<<"This will print forever.\n"; // This is an example of infinite do-while loop.
+    }while(true);
 */
 
-	return 0;
+    return 0;
 }

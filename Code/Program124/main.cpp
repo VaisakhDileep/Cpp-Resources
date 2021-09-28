@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 8, September, 2021
+Date        : 8, September, 2021
 Description : This program helps to understand header guards in C++.
 */
 
@@ -18,23 +18,23 @@ using namespace std;
 
 int main()
 {
-	Car_1 A {};
+    Car_1 A {};
 
-	A.say();
+    A.say();
 
-	cout<<"\n";
+    cout<<"\n";
 
-	A.H.say();
-	cout<<"\n";
+    A.H.say();
+    cout<<"\n";
 
-	Car_2 B {};
+    Car_2 B {};
 
-	B.say();
+    B.say();
 
-	cout<<"\n";
+    cout<<"\n";
 
-	B.H.say();
-	cout<<"\n";
+    B.H.say();
+    cout<<"\n";
 
-	return 0;
+    return 0;
 }

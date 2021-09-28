@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 27, December, 2020
+Date        : 27, December, 2020
 Description : This program helps to understand classes and objects in C++.
 */
 
@@ -17,17 +17,17 @@ class Player // Always give global scope for classes so that everyone can use th
 public: // We are making it public so that we can access them in the main function.
 
 // Attributes:
-	string name; // Strings are automatically initialized, so don't need to initialize them manually.
-	int health {100}; // We can initialize like this post c++ 11.
-	int xp {0};
+    string name; // Strings are automatically initialized, so don't need to initialize them manually.
+    int health {100}; // We can initialize like this post c++ 11.
+    int xp {0};
 
 // Methods:
-	void talk(string text_to_say)
-	{
-		cout<<name<<" says "<<"\""<<text_to_say<<"\"\n"; // We can use \" in order to print ".
-	}
+    void talk(string text_to_say)
+    {
+        cout<<name<<" says "<<"\""<<text_to_say<<"\"\n"; // We can use \" in order to print ".
+    }
 
-	bool is_dead();
+    bool is_dead();
 
 }; // Don't forget to add ';' at the end of the class definition.
 
@@ -36,10 +36,10 @@ int main()
 
 /*
 classes: It is a blueprint from which objects are created. It is a user-defined data-type. It contains attributes(data) and methods(functions).
-		egs --> std::string, std::vector.
+        egs --> std::string, std::vector.
 
 objects: It represents a specific instance of a class.
-		egs --> std::vector<int> scores, std::string name.
+        egs --> std::vector<int> scores, std::string name.
 */
 
 /*
@@ -47,7 +47,7 @@ Syntax for declaring a class:
 
 class Class_Name
 {
-	// declaration(s);
+    // declaration(s);
 };
 */
 
@@ -67,50 +67,50 @@ std::vector<Class_Name> object_vector {object_name1}; // We can have vector of o
 
 object_vector.push_back(object_name2);
 */
-	Player hero;
+    Player hero;
 
-	hero.name = "Langermann";
-	hero.health = 99;
-	hero.xp = 990;
+    hero.name = "Langermann";
+    hero.health = 99;
+    hero.xp = 990;
 
-	hero.talk("I will dominate !");
+    hero.talk("I will dominate !");
 
-	cout<<"Name  : "<<hero.name<<"\n"; // We can use '.' operator to access members in objects.
-	cout<<"Health: "<<hero.health<<"\n";
-	cout<<"XP    : "<<hero.xp<<"\n\n";
+    cout<<"Name  : "<<hero.name<<"\n"; // We can use '.' operator to access members in objects.
+    cout<<"Health: "<<hero.health<<"\n";
+    cout<<"XP    : "<<hero.xp<<"\n\n";
 
-	Player *enemy {nullptr};
+    Player *enemy {nullptr};
 
-	enemy = new Player;
+    enemy = new Player;
 
 /*
-	(*enemy).name = "Val"; // We use () because '.' operator has higher precedence over '*'.
-	(*enemy).health = 999999;
-	(*enemy).xp = 0;
+    (*enemy).name = "Val"; // We use () because '.' operator has higher precedence over '*'.
+    (*enemy).health = 999999;
+    (*enemy).xp = 0;
 
-	cout<<"Name  : "<<(*enemy).name<<"\n";
-	cout<<"Health: "<<(*enemy).health<<"\n";
-	cout<<"XP    : "<<(*enemy).xp<<"\n\n";
+    cout<<"Name  : "<<(*enemy).name<<"\n";
+    cout<<"Health: "<<(*enemy).health<<"\n";
+    cout<<"XP    : "<<(*enemy).xp<<"\n\n";
 */
 // The above piece of code can be replace by using the '->' operator.
 
-	enemy->name = "Val";
-	enemy->health = 999999;
-	enemy->xp = 0;
+    enemy->name = "Val";
+    enemy->health = 999999;
+    enemy->xp = 0;
 
-	enemy->talk("I will destroy you !");
+    enemy->talk("I will destroy you !");
 
-	cout<<"Name  : "<<enemy->name<<"\n";
-	cout<<"Health: "<<enemy->health<<"\n";
-	cout<<"XP    : "<<enemy->xp<<"\n\n";
+    cout<<"Name  : "<<enemy->name<<"\n";
+    cout<<"Health: "<<enemy->health<<"\n";
+    cout<<"XP    : "<<enemy->xp<<"\n\n";
 
-	Player player_array[] {hero, *enemy};
+    Player player_array[] {hero, *enemy};
 
-	vector<Player> player_vector {hero};
+    vector<Player> player_vector {hero};
 
-	player_vector.push_back(*enemy);
+    player_vector.push_back(*enemy);
 
-	delete enemy;
+    delete enemy;
 
-	return 0;
+    return 0;
 }

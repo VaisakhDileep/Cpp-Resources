@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 30, December, 2020
+Date        : 30, December, 2020
 Description : This program helps to understand implementation of member methods in C++.
 */
 
@@ -19,17 +19,17 @@ Description : This program helps to understand implementation of member methods 
 class AccountPrototypeOne // This is how to implement methods inside the class.
 {
 private:
-	double balance;
+    double balance;
 public:
-	void set_balance(double account_balance)
-	{
-		balance = account_balance;
-	}
+    void set_balance(double account_balance)
+    {
+        balance = account_balance;
+    }
 
-	double get_balance()
-	{
-		return balance;
-	}
+    double get_balance()
+    {
+        return balance;
+    }
 };
 
 // --------------- Account Prototype Two ---------------
@@ -37,20 +37,20 @@ public:
 class AccountPrototypeTwo // This is how to implement methods outside the class.
 {
 private:
-	double balance;
+    double balance;
 public:
-	void set_balance(double account_balance); // This is a method prototype.
-	double get_balance();
+    void set_balance(double account_balance); // This is a method prototype.
+    double get_balance();
 };
 
 void AccountPrototypeTwo::set_balance(double account_balance)
 {
-	balance = account_balance;
+    balance = account_balance;
 }
 
 double AccountPrototypeTwo::get_balance()
 {
-	return balance;
+    return balance;
 }
 
 using namespace std;
@@ -65,19 +65,19 @@ The following methods can be used to implement member methods in C++ classes:
 2. Can be implemented outside the class declaration, here we need to use scope resolution --> Class_Name::method_name.
 3. Can be separately specified from implementation --> .h is for class declaration, .cpp is for the class implementation.
 */
-	cout<<"Flag: "<<Flag<<"\n\n";
+    cout<<"Flag: "<<Flag<<"\n\n";
 
-	AccountPrototypeOne accountOne;
-	AccountPrototypeTwo accountTwo;
-	AccountPrototypeThree accountTree;
+    AccountPrototypeOne accountOne;
+    AccountPrototypeTwo accountTwo;
+    AccountPrototypeThree accountTree;
 
-	accountOne.set_balance(100);
-	accountTwo.set_balance(101);
-	accountTree.set_balance(102);
+    accountOne.set_balance(100);
+    accountTwo.set_balance(101);
+    accountTree.set_balance(102);
 
-	cout<<"Balance: "<<accountOne.get_balance()<<"\n";
-	cout<<"Balance: "<<accountTwo.get_balance()<<"\n";
-	cout<<"Balance: "<<accountTree.get_balance()<<"\n\n";
+    cout<<"Balance: "<<accountOne.get_balance()<<"\n";
+    cout<<"Balance: "<<accountTwo.get_balance()<<"\n";
+    cout<<"Balance: "<<accountTree.get_balance()<<"\n\n";
 
-	return 0;
+    return 0;
 }

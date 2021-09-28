@@ -1,5 +1,5 @@
 Procedural Programming: Focus is on process or action that a program takes. Program is typically a collection of functions.
-						Data is declared separately. Data is passed as arguments in function.
+                        Data is declared separately. Data is passed as arguments in function.
 
 Object-Oriented Programming: Models software in terms of classes and objects.
 

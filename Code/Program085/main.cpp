@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 25, January, 2021
+Date        : 25, January, 2021
 Description : This program helps to understand exception handling in C++.
 */
 
@@ -35,27 +35,27 @@ try { Code that may throw an exception } : If the code throws an exception the t
 catch(Exception ex) { Code to handle the exception }: Code that handles the exception. Can have multiple catch handlers. May or may not cause the program to terminate.
 */
 
-	cout<<"1.0 / 0 : "<<(1.0 / 0)<<"\n"; // Dividing a floating point number by '0' need not generate an exception.
-	cout<<"-1.0 / 0: "<<(-1.0 / 0)<<"\n";
-	cout<<"0.0 / 0 : "<<(0.0 / 0)<<"\n"; // "nan" - Not a number
+    cout<<"1.0 / 0 : "<<(1.0 / 0)<<"\n"; // Dividing a floating point number by '0' need not generate an exception.
+    cout<<"-1.0 / 0: "<<(-1.0 / 0)<<"\n";
+    cout<<"0.0 / 0 : "<<(0.0 / 0)<<"\n"; // "nan" - Not a number
 
-	int numerator {};
-	int denominator {};
+    int numerator {};
+    int denominator {};
 
-	numerator = 10;
-	denominator = 0;
+    numerator = 10;
+    denominator = 0;
 
-	try
-	{
-		if(denominator == 0)
-		{
-			throw 0;
-		}
-	}
-	catch(int &ex)
-	{
-		cerr<<"Sorry, Division by zero is not supported.\n"; // "cerr" represents the standard error stream.
-	}
+    try
+    {
+        if(denominator == 0)
+        {
+            throw 0;
+        }
+    }
+    catch(int &ex)
+    {
+        cerr<<"Sorry, Division by zero is not supported.\n"; // "cerr" represents the standard error stream.
+    }
 
-	return 0;
+    return 0;
 }

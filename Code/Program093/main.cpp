@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 31, January, 2021
+Date        : 31, January, 2021
 Description : This program helps to understand how to read a text file in C++.
 */
 
@@ -38,14 +38,14 @@ std::fstream in_file {"my_file.txt", std::ios::in | std::ios::binary}; // Notice
 Syntax for opening a file for reading(ifstream):
 std::ifstream in_file {"my_file.txt", std::ios::in};
 
-			..... or .....
+            ..... or .....
 
 std::ifstream in_file {"my_file.txt"}; // Including "std::ios::in" is not necessary when using ifstream.
 
 For binary mode:
 std::ifstream in_file {"my_file.txt", std::ios::binary};
 
-			..... or .....
+            ..... or .....
 
 std::ifstream in_file;
 in_file.open(filename); // "in_file.open(filename, std::ios::binary);" for binary mode.
@@ -64,22 +64,22 @@ in_file>>data;
 Syntax for checking if the file was opened successfully:
 if(in_file.is_open())
 {
-	// ..... Code .....
+    // ..... Code .....
 }
 else
 {
-	// Do something to convey that the file hasn't been opened successfully.
+    // Do something to convey that the file hasn't been opened successfully.
 }
 
-	..... or .....
+    ..... or .....
 
 if(in_file)
 {
-	// ..... Code .....
+    // ..... Code .....
 }
 else
 {
-	// Do something to convey that the file hasn't been opened successfully.
+    // Do something to convey that the file hasn't been opened successfully.
 }
 */
 
@@ -101,13 +101,13 @@ std::string line {};
 
 while(!in_file.eof())
 {
-	std::getline(in_file, line);
+    std::getline(in_file, line);
 
-	std::cout<<line<<"\n";
+    std::cout<<line<<"\n";
 }
 in_file.close(); // Close the file
 
-			..... or .....
+            ..... or .....
 
 std::ifstream in_file("my_file.txt");
 
@@ -115,7 +115,7 @@ std::string line {};
 
 while(std::getline(in_file, line))
 {
-	std::cout<<line<<"\n";
+    std::cout<<line<<"\n";
 }
 in_file.close(); // Close the file
 */
@@ -128,67 +128,67 @@ char c;
 
 while(in_file.getc(c))
 {
-	std::cout<<c;
+    std::cout<<c;
 }
 in_file.close(); // Close the file
 */
-	ifstream in_file;
+    ifstream in_file;
 
-	in_file.open("JumpStreet.txt"); // When naming directories make sure only to use alphabets(a-z, A-Z), underscores(_), numbers(0-9).
+    in_file.open("JumpStreet.txt"); // When naming directories make sure only to use alphabets(a-z, A-Z), underscores(_), numbers(0-9).
 
-	if(!in_file)
-	{
-		cerr<<"ERROR - Unable to open the file.\n";
+    if(!in_file)
+    {
+        cerr<<"ERROR - Unable to open the file.\n";
 
-		return 1; // Here '1' in "return 1" means that we are exiting the problem with some error.
-	}
+        return 1; // Here '1' in "return 1" means that we are exiting the problem with some error.
+    }
 
-	string line1 {};
-	string line2 {};
+    string line1 {};
+    string line2 {};
 
-	int num {};
+    int num {};
 
-	while(!in_file.eof()) // "eof" --> end of file
-	{
-		in_file>>num>>line1>>line2;
+    while(!in_file.eof()) // "eof" --> end of file
+    {
+        in_file>>num>>line1>>line2;
 
-		cout<<setw(3)<<left<<num<<line1<<" "<<line2<<"\n"; // Note here that whitespaces are not caught when using formatted read.
-	}
+        cout<<setw(3)<<left<<num<<line1<<" "<<line2<<"\n"; // Note here that whitespaces are not caught when using formatted read.
+    }
 
 // For more information about clear() refer "http://www.cplusplus.com/reference/ios/ios/clear/".
 
-	cout<<"\n";
+    cout<<"\n";
 
-	in_file.clear();
-	in_file.seekg(0); // Move to the top of the file
+    in_file.clear();
+    in_file.seekg(0); // Move to the top of the file
 
-	while(in_file>>num>>line1>>line2) // This will also work.
-	{
-		cout<<setw(3)<<left<<num<<line1<<" "<<line2<<"\n";
-	}
+    while(in_file>>num>>line1>>line2) // This will also work.
+    {
+        cout<<setw(3)<<left<<num<<line1<<" "<<line2<<"\n";
+    }
 
-	in_file.close();
+    in_file.close();
 
-	cout<<"\n";
+    cout<<"\n";
 
-	in_file.open("Homer.txt");
+    in_file.open("Homer.txt");
 
-	while(getline(in_file, line1))
-	{
-		cout<<line1<<"\n";
-	}
+    while(getline(in_file, line1))
+    {
+        cout<<line1<<"\n";
+    }
 
-	in_file.clear();
-	in_file.seekg(0);
+    in_file.clear();
+    in_file.seekg(0);
 
-	cout<<"\n";
+    cout<<"\n";
 
-	char chr {};
+    char chr {};
 
-	while(in_file.get(chr)) // Unformatted read
-	{
-		cout<<chr; // Notice here that it will read everything like whitespace, newline etc.
-	}
+    while(in_file.get(chr)) // Unformatted read
+    {
+        cout<<chr; // Notice here that it will read everything like whitespace, newline etc.
+    }
 
-	return 0;
+    return 0;
 }

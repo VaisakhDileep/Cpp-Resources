@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 19, January, 2021
+Date        : 19, January, 2021
 Description : This program helps to understand constexpr in C++.
 */
 
@@ -22,7 +22,7 @@ Rules for declaring constexpr functions:
 
 constexpr int constexpr_product(int x, int y)
 {
-	return (x * y);
+    return (x * y);
 }
 
 /*
@@ -32,35 +32,35 @@ Inline functions request compiler to extend at run-time and saves time due to fu
 
 int main()
 {
-	int number_1 {10}, number_2 {20};
+    int number_1 {10}, number_2 {20};
 
-	int constexpr number_3 {30}, number_4 {40};
+    int constexpr number_3 {30}, number_4 {40};
 
-	// int constexpr number_5; // Notice here we can't use uninitialized constexpr variables.
+    // int constexpr number_5; // Notice here we can't use uninitialized constexpr variables.
 
-	// number_3 = 50; // We can't change the value of "number_3" since it is a constexpr varaiable.
+    // number_3 = 50; // We can't change the value of "number_3" since it is a constexpr varaiable.
 
-	int result {};
+    int result {};
 
-	result = constexpr_product(number_1, number_2);
-	cout<<"Result: "<<result<<"\n";
+    result = constexpr_product(number_1, number_2);
+    cout<<"Result: "<<result<<"\n";
 
-	result = constexpr_product(number_3, number_4);
-	cout<<"Result: "<<result<<"\n";
+    result = constexpr_product(number_3, number_4);
+    cout<<"Result: "<<result<<"\n";
 
-	number_2 = 30;
+    number_2 = 30;
 
-	result = constexpr_product(number_1, number_2);
-	cout<<"Result: "<<result<<"\n";
+    result = constexpr_product(number_1, number_2);
+    cout<<"Result: "<<result<<"\n";
 
-	result = constexpr_product(4, 6);
-	cout<<"Result: "<<result<<"\n";
+    result = constexpr_product(4, 6);
+    cout<<"Result: "<<result<<"\n";
 
-	cout<<"Enter any two numbers: ";
-	cin>>number_1>>number_2;
+    cout<<"Enter any two numbers: ";
+    cin>>number_1>>number_2;
 
-	result = constexpr_product(number_1, number_2);
-	cout<<"Result: "<<result<<"\n";
+    result = constexpr_product(number_1, number_2);
+    cout<<"Result: "<<result<<"\n";
 
-	return 0;
+    return 0;
 }

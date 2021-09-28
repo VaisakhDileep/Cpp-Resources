@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 16, January, 2021
+Date        : 16, January, 2021
 Description : This program helps to understand the protected access-specifier in C++.
 */
 
@@ -11,49 +11,49 @@ using namespace std;
 class Base // Base class
 {
 public:
-	int public_int_variable {};
+    int public_int_variable {};
 
 protected:
-	int protected_int_variable {};
+    int protected_int_variable {};
 
 private:
-	int private_int_variable {};
+    int private_int_variable {};
 };
 
 class Derived_public: public Base // Public inheritance
 {
-	void access_base_elements()
-	{
-		public_int_variable = 0; // Access-specifier: public
+    void access_base_elements()
+    {
+        public_int_variable = 0; // Access-specifier: public
 
-		protected_int_variable = 0; // Access-specifier: protected
+        protected_int_variable = 0; // Access-specifier: protected
 
-		// private_int_variable = 0; // This will give an error
-	}
+        // private_int_variable = 0; // This will give an error
+    }
 };
 
 class Derived_protected: protected Base // Protected inheritance
 {
-	void acccess_base_elements()
-	{
-		public_int_variable = 0; // Access-specifier: protected
+    void acccess_base_elements()
+    {
+        public_int_variable = 0; // Access-specifier: protected
 
-		protected_int_variable = 0; // Access-specifier: protected
+        protected_int_variable = 0; // Access-specifier: protected
 
-		// private_int_variable = 0; // This will give an error
-	}
+        // private_int_variable = 0; // This will give an error
+    }
 };
 
 class Derived_private: private Base // Private inheritance
 {
-	void access_base_elements()
-	{
-		public_int_variable = 0; // Access-specifier: private
+    void access_base_elements()
+    {
+        public_int_variable = 0; // Access-specifier: private
 
-		protected_int_variable = 0; // Access-specifier: private
+        protected_int_variable = 0; // Access-specifier: private
 
-		// private_int_variable = 0; // This will give an error
-	}
+        // private_int_variable = 0; // This will give an error
+    }
 };
 
 int main()
@@ -63,7 +63,7 @@ Syntax for using protected access specifier:
 Class Base
 {
 protected:
-	// protected Base class members ....
+    // protected Base class members ....
 }
 */
 
@@ -98,29 +98,29 @@ public: a           Private Inheritance         private: a
 protected: b   ------------------------------>  private: b
 private: c                                      c: Not accessible
 */
-	Base base_object {};
+    Base base_object {};
 
-	base_object.public_int_variable = 0;
-	// base_object.protected_int_variable = 0; // The commented statements will generate an error.
-	// base_object.private_int_variable = 0;
+    base_object.public_int_variable = 0;
+    // base_object.protected_int_variable = 0; // The commented statements will generate an error.
+    // base_object.private_int_variable = 0;
 
-	Derived_public derived_public_object {};
+    Derived_public derived_public_object {};
 
-	derived_public_object.public_int_variable = 0;
-	// derived_public_object.protected_int_variable = 0;
-	// derived_public_object.private_int_variable = 0;
+    derived_public_object.public_int_variable = 0;
+    // derived_public_object.protected_int_variable = 0;
+    // derived_public_object.private_int_variable = 0;
 
-	Derived_protected derived_protected_object {};
+    Derived_protected derived_protected_object {};
 
-	// derived_protected_object.public_int_variable = 0;
-	// derived_protected_object.protected_int_variable = 0;
-	// derived_protected_object.private_int_variable = 0;
+    // derived_protected_object.public_int_variable = 0;
+    // derived_protected_object.protected_int_variable = 0;
+    // derived_protected_object.private_int_variable = 0;
 
-	Derived_private derived_private_object {};
+    Derived_private derived_private_object {};
 
-	// derived_private_object.public_int_variable = 0;
-	// derived_private_object.protected_int_variable = 0;
-	// derived_private_object.private_int_variable = 0;
+    // derived_private_object.public_int_variable = 0;
+    // derived_private_object.protected_int_variable = 0;
+    // derived_private_object.private_int_variable = 0;
 
-	return 0;
+    return 0;
 }

@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 15, January, 2021
+Date        : 15, January, 2021
 Description : This program helps to understand inheritance in C++.
 */
 
@@ -25,7 +25,7 @@ Base class(parent class, super class): The class being extended or inherited fro
 
 Derived class(child class, sub class): The class being created from the "Base" class. It will inherit attributes and operations from the "Base" class.
 
-	Base <--- Derived [UML representation]
+    Base <--- Derived [UML representation]
 
 "Is-A" Relationship: Here we use public inheritance, derived classes are sub-types of their Base classes. We can use a derived class object whenever we need to use a base class object.
 
@@ -36,9 +36,9 @@ We use inheritance for the following purposes:
 To understand generalization and specialization refer the image in "Additional Resources" named "C++GeneralizationVsSpecialization".
 
 Public Inheritance("Is-A") vs Composition("Has-A"):
-	Person <--- Employee (Here Employee is a Person)
+    Person <--- Employee (Here Employee is a Person)
 
-	Person ---- Account(Here Person has an Account)
+    Person ---- Account(Here Person has an Account)
 
 From the above two examples we can derive that Employee also has an Account.
 
@@ -46,8 +46,8 @@ Also we have been using composition all along,
 Class Person
 {
 private:
-	string name; // Person has a name
-	Account account; // Person has an account
+    string name; // Person has a name
+    Account account; // Person has an account
 };
 
 Aggregation, Association and Composition are also different techniques used for modeling object oriented behaviour(Check them out later).
@@ -57,12 +57,12 @@ Aggregation, Association and Composition are also different techniques used for 
 Syntax for deriving classes from existing classes:
 class Base
 {
-	// Base class members ...
+    // Base class members ...
 };
 
 class Derived: access-specifier Base // Here "access-specifier" can be public, private, or protected(by default it is private).
 {
-	// Derived class members ...
+    // Derived class members ...
 };
 */
 
@@ -71,49 +71,49 @@ public(access-specifier) inheritance: It established "Is-A" relationship between
 
 private and protected inheritance: It established "derived class Has-A base class" relationship(different from composition).
 */
-	Player Homer {};
+    Player Homer {};
 
-	Homer.set_player_name("Homer J Simpson");
-	Homer.set_player_xp(100);
+    Homer.set_player_name("Homer J Simpson");
+    Homer.set_player_xp(100);
 
-	cout<<"Player name: "<<Homer.get_player_name()<<"\n";
-	cout<<"Player xp  : "<<Homer.get_player_xp()<<"\n\n";
+    cout<<"Player name: "<<Homer.get_player_name()<<"\n";
+    cout<<"Player xp  : "<<Homer.get_player_xp()<<"\n\n";
 
-	Player *Bart {nullptr};
+    Player *Bart {nullptr};
 
-	Bart = new Player;
+    Bart = new Player;
 
-	Bart->set_player_name("Bart J Simpson");
-	Bart->set_player_xp(500);
+    Bart->set_player_name("Bart J Simpson");
+    Bart->set_player_xp(500);
 
-	cout<<"Player name: "<<Bart->get_player_name()<<"\n";
-	cout<<"Player xp  : "<<Bart->get_player_xp()<<"\n\n";
+    cout<<"Player name: "<<Bart->get_player_name()<<"\n";
+    cout<<"Player xp  : "<<Bart->get_player_xp()<<"\n\n";
 
-	delete Bart;
+    delete Bart;
 
-	Hero Chief_Clancy_Wiggum {};
+    Hero Chief_Clancy_Wiggum {};
 
-	Chief_Clancy_Wiggum.set_hero_name("Clancy Wiggum");
-	Chief_Clancy_Wiggum.set_hero_xp(-1);
-	Chief_Clancy_Wiggum.set_hero_clan("Springfield Police Department");
+    Chief_Clancy_Wiggum.set_hero_name("Clancy Wiggum");
+    Chief_Clancy_Wiggum.set_hero_xp(-1);
+    Chief_Clancy_Wiggum.set_hero_clan("Springfield Police Department");
 
-	cout<<"Hero name: "<<Chief_Clancy_Wiggum.get_hero_name()<<"\n";
-	cout<<"Hero xp  : "<<Chief_Clancy_Wiggum.get_hero_xp()<<"\n";
-	cout<<"Hero clan: "<<Chief_Clancy_Wiggum.get_hero_clan()<<"\n\n";
+    cout<<"Hero name: "<<Chief_Clancy_Wiggum.get_hero_name()<<"\n";
+    cout<<"Hero xp  : "<<Chief_Clancy_Wiggum.get_hero_xp()<<"\n";
+    cout<<"Hero clan: "<<Chief_Clancy_Wiggum.get_hero_clan()<<"\n\n";
 
-	Hero *Officer_Lou;
+    Hero *Officer_Lou;
 
-	Officer_Lou = new Hero;
+    Officer_Lou = new Hero;
 
-	Officer_Lou->set_player_name("Lou"); // See here we can use base class's methods too.
-	Officer_Lou->set_player_xp(-2);
-	Officer_Lou->set_hero_clan("Springfield Police Department");
+    Officer_Lou->set_player_name("Lou"); // See here we can use base class's methods too.
+    Officer_Lou->set_player_xp(-2);
+    Officer_Lou->set_hero_clan("Springfield Police Department");
 
-	cout<<"Hero name: "<<Officer_Lou->get_player_name()<<"\n";
-	cout<<"Hero xp  : "<<Officer_Lou->get_player_xp()<<"\n";
-	cout<<"Hero clan: "<<Officer_Lou->get_hero_clan()<<"\n\n";
+    cout<<"Hero name: "<<Officer_Lou->get_player_name()<<"\n";
+    cout<<"Hero xp  : "<<Officer_Lou->get_player_xp()<<"\n";
+    cout<<"Hero clan: "<<Officer_Lou->get_hero_clan()<<"\n\n";
 
-	delete Officer_Lou;
+    delete Officer_Lou;
 
-	return 0;
+    return 0;
 }

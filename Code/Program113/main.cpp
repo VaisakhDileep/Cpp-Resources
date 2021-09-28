@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 12, February, 2021
+Date        : 12, February, 2021
 Description : This program helps to understand std::queue in STL container adapters in C++.
 */
 
@@ -15,20 +15,20 @@ using namespace std;
 template<typename T>
 void display(queue<T> q) // Notice here we are passing as a copy.
 {
-	T top_elem;
+    T top_elem;
 
-	cout<<"[ ";
+    cout<<"[ ";
 
-	while(!q.empty())
-	{
-		top_elem = q.front(); // In queue elements are popped from the front.
+    while(!q.empty())
+    {
+        top_elem = q.front(); // In queue elements are popped from the front.
 
-		q.pop();
+        q.pop();
 
-		cout<<top_elem<<" ";
-	}
+        cout<<top_elem<<" ";
+    }
 
-	cout<<"]";
+    cout<<"]";
 }
 
 int main()
@@ -46,51 +46,51 @@ The operations performed on std::queue are:
 5. empty - It will returns true if the queue is empty.
 6. size  - It will return the number of elements present in the queue.
 */
-	queue<int> test_1; // By default std::deque is used as the container.
-	queue<int, list<int>> test_2;
-	queue<int, deque<int>> test_3; // Notice here we do not include the deque library(#include<deque>).
+    queue<int> test_1; // By default std::deque is used as the container.
+    queue<int, list<int>> test_2;
+    queue<int, deque<int>> test_3; // Notice here we do not include the deque library(#include<deque>).
 
-	for(int i : {0, 1 ,2, 3, 4, 5, 6, 7, 8, 9})
-	{
-		test_1.push(i);
-	}
+    for(int i : {0, 1 ,2, 3, 4, 5, 6, 7, 8, 9})
+    {
+        test_1.push(i);
+    }
 
-	cout<<"test 1: ";
-	display(test_1);
-	cout<<"\n\n";
+    cout<<"test 1: ";
+    display(test_1);
+    cout<<"\n\n";
 
-	cout<<"Front [test 1]: "<<test_1.front()<<"\n"; // .front() returns a reference, so we can update the first element.
-	cout<<"Back  [test 1]: "<<test_1.back()<<"\n"; // .back() returns a reference, so we can update the last element.
-	cout<<"Size  [test 1]: "<<test_1.size()<<"\n\n";
+    cout<<"Front [test 1]: "<<test_1.front()<<"\n"; // .front() returns a reference, so we can update the first element.
+    cout<<"Back  [test 1]: "<<test_1.back()<<"\n"; // .back() returns a reference, so we can update the last element.
+    cout<<"Size  [test 1]: "<<test_1.size()<<"\n\n";
 
-	cout<<"test 1 after pushing -1 into it: \n"; // Notice here that the elements are pushed from the back.
+    cout<<"test 1 after pushing -1 into it: \n"; // Notice here that the elements are pushed from the back.
 
-	test_1.push(-1);
+    test_1.push(-1);
 
-	cout<<"test 1: ";
-	display(test_1);
-	cout<<"\n\n";
+    cout<<"test 1: ";
+    display(test_1);
+    cout<<"\n\n";
 
-	cout<<"test 1 after popping an element from it: \n"; // Notice here that the elements are popped from the front.
+    cout<<"test 1 after popping an element from it: \n"; // Notice here that the elements are popped from the front.
 
-	test_1.pop();
+    test_1.pop();
 
-	cout<<"test 1: ";
-	display(test_1);
-	cout<<"\n\n";
+    cout<<"test 1: ";
+    display(test_1);
+    cout<<"\n\n";
 
-	while(!test_1.empty()) // This is how we clear a queue.
-	{
-		test_1.pop();
-	}
+    while(!test_1.empty()) // This is how we clear a queue.
+    {
+        test_1.pop();
+    }
 
-	cout<<"test 1 after clearing all the elements: \n";
+    cout<<"test 1 after clearing all the elements: \n";
 
-	cout<<"test 1 : ";
-	display(test_1);
-	cout<<"\n";
+    cout<<"test 1 : ";
+    display(test_1);
+    cout<<"\n";
 
-	cout<<"Size [test 1]: "<<test_1.size()<<"\n";
+    cout<<"Size [test 1]: "<<test_1.size()<<"\n";
 
-	return 0;
+    return 0;
 }

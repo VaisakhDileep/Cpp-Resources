@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 26, December, 2020
+Date        : 26, December, 2020
 Description : This program helps to understand how to pass pointers to functions in C++.
 */
 
@@ -22,69 +22,69 @@ void display_array(const int *array, int sentinel); // "const" prevents the arra
 
 int main()
 {
-	int value {10};
+    int value {10};
 
-	int *int_ptr {nullptr};
+    int *int_ptr {nullptr};
 
-	cout<<"Value: "<<value<<"\n";
+    cout<<"Value: "<<value<<"\n";
 
-	double_data(&value);
+    double_data(&value);
 
-	cout<<"Value: "<<value<<"\n";
+    cout<<"Value: "<<value<<"\n";
 
-	int_ptr = &value;
+    int_ptr = &value;
 
-	double_data(int_ptr);
+    double_data(int_ptr);
 
-	cout<<"Value: "<<value<<"\n\n";
+    cout<<"Value: "<<value<<"\n\n";
 
-	int x {100}, y {200};
+    int x {100}, y {200};
 
-	cout<<"x: "<<x<<"\t y: "<<y<<"\n";
+    cout<<"x: "<<x<<"\t y: "<<y<<"\n";
 
-	swap(&x, &y);
+    swap(&x, &y);
 
-	cout<<"x: "<<x<<"\t y: "<<y<<"\n\n";
+    cout<<"x: "<<x<<"\t y: "<<y<<"\n\n";
 
-	vector<string> simpson_family {"Homer Simpson", "Marge Bouvier", "Lisa Simpson", "Bart Simpson", "Maggie Simpson"};
+    vector<string> simpson_family {"Homer Simpson", "Marge Bouvier", "Lisa Simpson", "Bart Simpson", "Maggie Simpson"};
 
-	display_vector(&simpson_family);
+    display_vector(&simpson_family);
 
-	int scores[] {100, 90, 97, 98, 92, -1}; // Here -1 is like a sentinel(end of the array).
+    int scores[] {100, 90, 97, 98, 92, -1}; // Here -1 is like a sentinel(end of the array).
 
-	display_array(scores, -1); // Name of the array represents the address of the first element of the array.
+    display_array(scores, -1); // Name of the array represents the address of the first element of the array.
 
-	return 0;
+    return 0;
 }
 
 void double_data(int *int_ptr)
 {
-	*int_ptr *= 2;
+    *int_ptr *= 2;
 }
 
 void swap(int *x, int *y)
 {
-	int temp = *x;
+    int temp = *x;
 
-	*x = *y;
-	*y = temp;
+    *x = *y;
+    *y = temp;
 }
 
 void display_vector(const vector<string> *v)
 {
-	for(auto str : *v)
-	{
-		cout<<str<<"\t";
-	}
+    for(auto str : *v)
+    {
+        cout<<str<<"\t";
+    }
 
-	cout<<"\n";
+    cout<<"\n";
 }
 
 void display_array(const int *array, int sentinel)
 {
-	while(*array != sentinel)
-	{
-		cout<<*array++<<" "; // This will point to next element('*' and '++' have the same precedence but associativity is from right to left.).
-	}
-	cout<<"\n\n";
+    while(*array != sentinel)
+    {
+        cout<<*array++<<" "; // This will point to next element('*' and '++' have the same precedence but associativity is from right to left.).
+    }
+    cout<<"\n\n";
 }

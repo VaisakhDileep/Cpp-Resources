@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 1, February, 2021
+Date        : 1, February, 2021
 Description : This program helps to understand how to write to a text file in C++.
 */
 
@@ -36,14 +36,14 @@ std::fstream out_file {"my_file.txt", std::ios::out | std::ios::binary}; // Here
 Syntax for opening a file for writing(ofstream):
 std::ofstream out_file {"my_file.txt", std::ios::out};
 
-			..... or .....
+            ..... or .....
 
 std::ofstream out_file {"my_file.txt"}; // Including "std::ios::out" is not necessary when using ofstream.
 
 For binary mode:
 std::ofstream out_file {"my_file.txt", std::ios::binary};
 
-			..... or .....
+            ..... or .....
 
 std::ofstream out_file;
 out_file.open("my_file.txt"); // out_file.open("my_file.txt", std::ios::binary); --> For binary mode.
@@ -73,11 +73,11 @@ In std::ios::app, you can only write at the end, but ios::ate reads and writes a
 Syntax for checking if a file was opened successfully:
 if(out_file.is_open())
 {
-	// ..... Code .....
+    // ..... Code .....
 }
 else
 {
-	// Do something to convey that the file hasn't been opened successfully.
+    // Do something to convey that the file hasn't been opened successfully.
 }
 */
 
@@ -87,26 +87,26 @@ Data_Type data;
 
 out_file<<data;
 */
-	ofstream out_file;
+    ofstream out_file;
 
-	out_file.open("Date.txt", ios::app);
+    out_file.open("Date.txt", ios::app);
 
-	if(!out_file)
-	{
-		cerr<<"ERROR - Unable to open the file.\n";
+    if(!out_file)
+    {
+        cerr<<"ERROR - Unable to open the file.\n";
 
-		return 1;
-	}
+        return 1;
+    }
 
-	string date {};
+    string date {};
 
-	cout<<"Enter today's date: ";
+    cout<<"Enter today's date: ";
 
-	getline(cin, date);
+    getline(cin, date);
 
-	out_file<<date<<"\n";
+    out_file<<date<<"\n";
 
-	out_file.close();
+    out_file.close();
 
-	return 0;
+    return 0;
 }

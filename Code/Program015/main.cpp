@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 19, December, 2020
+Date        : 19, December, 2020
 Description : This program helps to understand do-while loops in C++.
 */
 
@@ -15,48 +15,48 @@ Syntax for do-while loop:
 
 do
 {
-	statement(s);
+    statement(s);
 }while(expression); --> include semicolon at the end of the do-while loop. It will be executed at least once.
 */
-	int input {};
+    int input {};
 
-	do
-	{
-		cout<<"Enter 9: ";
+    do
+    {
+        cout<<"Enter 9: ";
 
-		cin>>input;
-	}while(input != 9);
+        cin>>input;
+    }while(input != 9);
 
 // Mystery Box:
-	char choice {};
+    char choice {};
 
-	do
-	{
-		cout<<"----------------------------------\n";
-		cout<<"1. Mystery Box 1.\n";
-		cout<<"2. Mystery Box 2.\n";
-		cout<<"3. Mystery Box 3.\n";
-		cout<<"4. Quit.\n";
+    do
+    {
+        cout<<"----------------------------------\n";
+        cout<<"1. Mystery Box 1.\n";
+        cout<<"2. Mystery Box 2.\n";
+        cout<<"3. Mystery Box 3.\n";
+        cout<<"4. Quit.\n";
 
-		cout<<"Enter your choice: ";
+        cout<<"Enter your choice: ";
 
-		cin>>choice;
+        cin>>choice;
 
-		if (choice == '1')
-			cout<<"Congratulations, you can restart your life.\n";
+        if (choice == '1')
+            cout<<"Congratulations, you can restart your life.\n";
 
-		else if (choice == '2')
-			cout<<"Congratulations, you get a second life.\n";
+        else if (choice == '2')
+            cout<<"Congratulations, you get a second life.\n";
 
-		else if (choice == '3')
-			cout<<"Congratulations, you get a million dollars.\n";
+        else if (choice == '3')
+            cout<<"Congratulations, you get a million dollars.\n";
 
-		else if(choice == '4')
-			cout<<"Good Bye .....\n";
+        else if(choice == '4')
+            cout<<"Good Bye .....\n";
 
-		else
-			cout<<"Invalid Choice.....\n";
-	}while(choice != '4');
+        else
+            cout<<"Invalid Choice.....\n";
+    }while(choice != '4');
 
-	return 0;
+    return 0;
 }

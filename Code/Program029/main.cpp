@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 23, December, 2020
+Date        : 23, December, 2020
 Description : This program helps to understand how to pass arrays to user-defined functions in C++.
 */
 
@@ -16,33 +16,33 @@ void zero_array(int numbers[], size_t size); // Since we are passing the actual 
 
 int main()
 {
-	int my_numbers[] {1, 2, 3, 4, 5};
+    int my_numbers[] {1, 2, 3, 4, 5};
 
-	cout<<"Original array: ";
-	print_array(my_numbers, 5);
-	cout<<"\n";
+    cout<<"Original array: ";
+    print_array(my_numbers, 5);
+    cout<<"\n";
 
-	zero_array(my_numbers, 5);
+    zero_array(my_numbers, 5);
 
-	cout<<"After resetting the original array: ";
-	print_array(my_numbers, 5);
-	cout<<"\n";
+    cout<<"After resetting the original array: ";
+    print_array(my_numbers, 5);
+    cout<<"\n";
 
-	return 0;
+    return 0;
 }
 
 void print_array(const int numbers[], size_t size)
 {
-	for(size_t i {0}; i < size; ++i)
-	{
-		cout<<numbers[i]<<" ";
-	}
+    for(size_t i {0}; i < size; ++i)
+    {
+        cout<<numbers[i]<<" ";
+    }
 }
 
 void zero_array(int numbers[], size_t size)
 {
-	for(size_t i {0}; i < size; ++i)
-	{
-		numbers[i] = 0;
-	}
+    for(size_t i {0}; i < size; ++i)
+    {
+        numbers[i] = 0;
+    }
 }

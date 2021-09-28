@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 18, May, 2021
+Date        : 18, May, 2021
 Description : This program helps to understand how to pass a variable number of arguments to a function in C++.
 */
 
@@ -12,21 +12,21 @@ using namespace std;
 
 void function_with_variable_arguments(int count, ...) // "count" is the number of arguments provided. Eclipse(...) means there is a variable number of arguments.
 {
-	va_list variable_list {}; // "va_list" is provided by "cstdarg" header file.
+    va_list variable_list {}; // "va_list" is provided by "cstdarg" header file.
 
-	va_start(variable_list, count); // "va_start" initializes "variable_list" to retrieve additional arguments.
+    va_start(variable_list, count); // "va_start" initializes "variable_list" to retrieve additional arguments.
 
-	for(int i {0}; i < count; i++)
-	{
-		cout<<va_arg(variable_list, char*)<<" "; // "va_arg" cannot determine the actual type of the arguments passed to the function, so we have to pass the type.
-	}
+    for(int i {0}; i < count; i++)
+    {
+        cout<<va_arg(variable_list, char*)<<" "; // "va_arg" cannot determine the actual type of the arguments passed to the function, so we have to pass the type.
+    }
 
-	va_end(variable_list); // Cleans memory reserved for "variable_list".
+    va_end(variable_list); // Cleans memory reserved for "variable_list".
 }
 
 int main()
 {
-	function_with_variable_arguments(4, "one", "two", "three", "four");
+    function_with_variable_arguments(4, "one", "two", "three", "four");
 
-	return 0;
+    return 0;
 }

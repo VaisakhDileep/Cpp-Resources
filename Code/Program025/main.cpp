@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 22, December, 2020
+Date        : 22, December, 2020
 Description : This program helps to understand how to define functions in C++.
 */
 
@@ -10,36 +10,36 @@ using namespace std;
 
 void say_world()
 {
-	cout<<"World\n";
+    cout<<"World\n";
 
-	cout<<"Bye from say_world()\n";
+    cout<<"Bye from say_world()\n";
 }
 
 void say_hello()
 {
-	cout<<"Hello ";
+    cout<<"Hello ";
 
-	say_world();
+    say_world();
 
-	cout<<"Bye from say_hello()\n";
+    cout<<"Bye from say_hello()\n";
 }
 
 double calc_area(double radius)
 {
-	const double pi {3.14159};
+    const double pi {3.14159};
 
-	return (pi * radius * radius);
+    return (pi * radius * radius);
 }
 
 void area_circle()
 {
-	double radius {};
+    double radius {};
 
-	cout<<"Enter the radius of the circle: ";
+    cout<<"Enter the radius of the circle: ";
 
-	cin>>radius;
+    cin>>radius;
 
-	cout<<"The area of the circle with radius "<<radius<<" is "<<calc_area(radius)<<"\n";
+    cout<<"The area of the circle with radius "<<radius<<" is "<<calc_area(radius)<<"\n";
 }
 
 int main()
@@ -55,44 +55,44 @@ Example of a function with no parameters:
 
 int function_name()
 {
-	statement(s);
+    statement(s);
 
-	return 0;
+    return 0;
 }
 
 Example of a function that takes in 1 parameter:
 
 int function_name(int a)
 {
-	statement(s);
+    statement(s);
 
-	return 0;
+    return 0;
 }
 
 Example of a function that returns void(nothing):
 
 void function_name()
 {
-	statement(s);
+    statement(s);
 
-	return; // Optional
+    return; // Optional
 }
 
 Example of a function that takes in multiple parameters:
 
 void function_name(int a, std::string b)
 {
-	statement(s);
+    statement(s);
 
-	return; // Optional
+    return; // Optional
 }
 */
 
-	say_hello(); // Always declare the functions before we use them(declaration should always be above the function call).
+    say_hello(); // Always declare the functions before we use them(declaration should always be above the function call).
 
-	area_circle(); // Note: We can't define a function inside another function.
+    area_circle(); // Note: We can't define a function inside another function.
 
-	cout<<"Bye from main function.\n";
+    cout<<"Bye from main function.\n";
 
-	return 0;
+    return 0;
 }

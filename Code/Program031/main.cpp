@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 23, December, 2020
+Date        : 23, December, 2020
 Description : This program helps to understand scope rules in C++.
 */
 
@@ -25,49 +25,49 @@ int main()
 
 // Global scope: They are visible to all parts of the program after the global identifier has been declared.
 
-	int variable {100};
+    int variable {100};
 
-	cout<<"'variable' inside main() function: "<<variable<<"\n";
+    cout<<"'variable' inside main() function: "<<variable<<"\n";
 
-	{ // This creates a new level of scope.
+    { // This creates a new level of scope.
 
-		cout<<"'variable' inside the inner block of the main() function: "<<variable<<"\n"; // Inner block can access the outer block identifiers.
+        cout<<"'variable' inside the inner block of the main() function: "<<variable<<"\n"; // Inner block can access the outer block identifiers.
 
-		int variable {200};
+        int variable {200};
 
-		cout<<"local instance of 'variable' inside the inner block of the main() function: "<<variable<<"\n"; // Inner block identifier overides the outer block identifer if they have the same name.
-	}
+        cout<<"local instance of 'variable' inside the inner block of the main() function: "<<variable<<"\n"; // Inner block identifier overides the outer block identifer if they have the same name.
+    }
 
-	cout<<"'variable' inside main() function: "<<variable<<"\n"; // Changes made in the inner block won't be reflected in the outer block.
+    cout<<"'variable' inside main() function: "<<variable<<"\n"; // Changes made in the inner block won't be reflected in the outer block.
 
-	local_function(16);
+    local_function(16);
 
-	static_function();
-	static_function();
-	static_function();
-	static_function();
+    static_function();
+    static_function();
+    static_function();
+    static_function();
 
-	return 0;
+    return 0;
 }
 
 void local_function(int x)
 {
-	cout<<"'variable' inside local() function before creating: "<<variable<<"\n"; // This will print the global variant of 'local' variable.
+    cout<<"'variable' inside local() function before creating: "<<variable<<"\n"; // This will print the global variant of 'local' variable.
 
-	int variable {250}; // This is local to "local_function". It overides the global variant of "variable".
+    int variable {250}; // This is local to "local_function". It overides the global variant of "variable".
 
-	cout<<"'variable' inside local() function: "<<variable<<"\n";
+    cout<<"'variable' inside local() function: "<<variable<<"\n";
 
-	variable = x;
+    variable = x;
 
-	cout<<"'variable' inside local() function after assigning: "<<variable<<"\n";
+    cout<<"'variable' inside local() function after assigning: "<<variable<<"\n";
 }
 
 void static_function()
 {
-	static int count {1}; // This is only initialized once during the first call.
+    static int count {1}; // This is only initialized once during the first call.
 
-	cout<<"This function has been called "<<count<<" times.\n";
+    cout<<"This function has been called "<<count<<" times.\n";
 
-	count++;
+    count++;
 }

@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 5, February, 2021
+Date        : 5, February, 2021
 Description : This program helps to understand Standard Template Library in C++.
 */
 
@@ -34,19 +34,19 @@ Advantages of STL:
 /*
 Elements of STL:
 1. Containers:
-	They are a collection of objects or primitive types.
-	For more information refer: "https://www.cplusplus.com/reference/stl/"
-	egs: array, vector, deque, stack, set, map, etc..
+    They are a collection of objects or primitive types.
+    For more information refer: "https://www.cplusplus.com/reference/stl/"
+    egs: array, vector, deque, stack, set, map, etc..
 
 2. Algorithms [about 60]:
-	They are functions for processing sequences of elements from containers.
-	For more information refer: "https://www.cplusplus.com/reference/algorithm/"
-	egs: find, max, count, accumulate, sort, etc..
+    They are functions for processing sequences of elements from containers.
+    For more information refer: "https://www.cplusplus.com/reference/algorithm/"
+    egs: find, max, count, accumulate, sort, etc..
 
 3. Iterators:
-	They are used to generate sequences of elements from containers.
-	For more information refer: "https://www.cplusplus.com/reference/iterator/"
-	egs: begin(), end(), advance() etc..
+    They are used to generate sequences of elements from containers.
+    For more information refer: "https://www.cplusplus.com/reference/iterator/"
+    egs: begin(), end(), advance() etc..
 
 Also refer Functors and Allocators which are also elements in STL.
 */
@@ -72,33 +72,33 @@ The different types of Algorithms:
 1. Non-Modifying
 2. Modifying
 */
-	vector<int> v {1, 5, 3, 2, 4};
+    vector<int> v {1, 5, 3, 2, 4};
 
-	sort(v.begin(), v.end()); // Here .begin() and .end() are iterators.
+    sort(v.begin(), v.end()); // Here .begin() and .end() are iterators.
 
-	cout<<"V: ";
-	for(auto elem : v)
-	{
-		cout<<elem<<" ";
-	}
+    cout<<"V: ";
+    for(auto elem : v)
+    {
+        cout<<elem<<" ";
+    }
 
-	cout<<"\n\n";
+    cout<<"\n\n";
 
-	reverse(v.begin(), v.end());
+    reverse(v.begin(), v.end());
 
-	cout<<"V: ";
-	for(auto elem : v)
-	{
-		cout<<elem<<" ";
-	}
+    cout<<"V: ";
+    for(auto elem : v)
+    {
+        cout<<elem<<" ";
+    }
 
-	cout<<"\n\n";
+    cout<<"\n\n";
 
-	int int_sum {};
+    int int_sum {};
 
-	int_sum = accumulate(v.begin(), v.end(), 0); // Here '0' is the initial value(If you put '0.0' then it will return in double).
+    int_sum = accumulate(v.begin(), v.end(), 0); // Here '0' is the initial value(If you put '0.0' then it will return in double).
 
-	cout<<"Sum: "<<int_sum<<"\n\n";
+    cout<<"Sum: "<<int_sum<<"\n\n";
 
-	return 0;
+    return 0;
 }

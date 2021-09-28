@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 18, December, 2020
+Date        : 18, December, 2020
 Description : This program helps to understand switch statements in C++.
 */
 
@@ -14,92 +14,92 @@ int main()
 Syntax for switch statements:
 switch(integer_control_expr)
 {
-	case expression_1 : statement_1; break;
-	case expression_2 : statement_2; break; --> Here we don't need to put blocks { } for multiple statements, but for defining variables we need to include blocks.
-	case expression_3 : statement_3; break;
-				.
-				.
-				.
-	case expression_n : statement_n; break; --> If we don't put break, then fall-through occurs and all the statement below it will execute.
+    case expression_1 : statement_1; break;
+    case expression_2 : statement_2; break; --> Here we don't need to put blocks { } for multiple statements, but for defining variables we need to include blocks.
+    case expression_3 : statement_3; break;
+                .
+                .
+                .
+    case expression_n : statement_n; break; --> If we don't put break, then fall-through occurs and all the statement below it will execute.
 
-	default : statement_default;
+    default : statement_default;
 }
 */
 
 // Switching using enumeration.
-	enum color {red, green, blue}; // Blueprint
+    enum color {red, green, blue}; // Blueprint
 
-	color screen_color {green};
+    color screen_color {green};
 
-	switch(screen_color)
-	{
-		case red   : cout<<"RED";
-					break;
+    switch(screen_color)
+    {
+        case red   : cout<<"RED";
+                    break;
 
-		case green : cout<<"GREEN";
-					break;
+        case green : cout<<"GREEN";
+                    break;
 
-		case blue  : cout<<"BLUE"; // Suppose we don't handle some of the enumeration types, then compiler will generate a warning asking us to handle it.
-					break;
+        case blue  : cout<<"BLUE"; // Suppose we don't handle some of the enumeration types, then compiler will generate a warning asking us to handle it.
+                    break;
 
-		default : cout<<"Should never execute !!!"; // Because we have enumerated all the possibilities.
-	}
+        default : cout<<"Should never execute !!!"; // Because we have enumerated all the possibilities.
+    }
 
-	cout<<"\n";
+    cout<<"\n";
 
 // Grade Requirement: This program calculates the marks required to achieve the given grade.
 
-	char letter_grade {};
+    char letter_grade {};
 
-	cout<<"Enter the grade you expect for your exam: ";
+    cout<<"Enter the grade you expect for your exam: ";
 
-	cin>>letter_grade;
+    cin>>letter_grade;
 
-	switch(letter_grade) // We can use "char" data type because they are part of the integer data type too.
-	{
-		case 'a':
-		case 'A': cout<<"You need to get 90 marks or above, study really hard.\n";
-				break;
+    switch(letter_grade) // We can use "char" data type because they are part of the integer data type too.
+    {
+        case 'a':
+        case 'A': cout<<"You need to get 90 marks or above, study really hard.\n";
+                break;
 
-		case 'b':
-		case 'B': cout<<"You need to get 80 - 89 marks to achieve this grade.\n";
-				break;
+        case 'b':
+        case 'B': cout<<"You need to get 80 - 89 marks to achieve this grade.\n";
+                break;
 
-		case 'c':
-		case 'C': cout<<"You need to get 70 - 79 marks to achieve this grade.\n";
-				break;
+        case 'c':
+        case 'C': cout<<"You need to get 70 - 79 marks to achieve this grade.\n";
+                break;
 
-		case 'd':
-		case 'D': cout<<"You need to get 60 - 69 marks to achieve this grade, seriously aim higher.\n";
-				break;
+        case 'd':
+        case 'D': cout<<"You need to get 60 - 69 marks to achieve this grade, seriously aim higher.\n";
+                break;
 
-		case 'f':
-		case 'F':
-		{
-			char confirm {};
+        case 'f':
+        case 'F':
+        {
+            char confirm {};
 
-			cout<<"Are you sure (Y/N) ?: ";
+            cout<<"Are you sure (Y/N) ?: ";
 
-			cin>>confirm;
+            cin>>confirm;
 
-			if (confirm == 'y' || confirm == 'Y')
-			{
-				cout<<"OK!. I guess you don't want to study.\n";
-			}
-			else if(confirm == 'n' || confirm == 'N')
-			{
-				cout<<"Good. Go Study!\n";
-			}
-			else
-			{
-				cout<<"Illegal Choice. Good Bye..\n";
-			}
+            if (confirm == 'y' || confirm == 'Y')
+            {
+                cout<<"OK!. I guess you don't want to study.\n";
+            }
+            else if(confirm == 'n' || confirm == 'N')
+            {
+                cout<<"Good. Go Study!\n";
+            }
+            else
+            {
+                cout<<"Illegal Choice. Good Bye..\n";
+            }
 
-			break;
-		}
+            break;
+        }
 
-		default : cout<<"Sorry couldn't recognize that grade.\n";
-	}
+        default : cout<<"Sorry couldn't recognize that grade.\n";
+    }
 
-	return 0;
+    return 0;
 }

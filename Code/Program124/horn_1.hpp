@@ -9,10 +9,10 @@ using namespace std;
 class Horn_1
 {
 public:
-	void say()
-	{
-		cout<<"Beep Beep !!";
-	}
+    void say()
+    {
+        cout<<"Beep Beep !!";
+    }
 };
 
 #endif

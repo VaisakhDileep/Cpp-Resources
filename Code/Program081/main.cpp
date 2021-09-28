@@ -1,6 +1,6 @@
 /*
 Created by  : Vaisakh Dileep
-Date		: 23, January, 2021
+Date        : 23, January, 2021
 Description : This program helps to understand unique_ptr(smart_pointer) in C++.
 */
 
@@ -15,29 +15,29 @@ using namespace std;
 class Test
 {
 private:
-	int data;
+    int data;
 public:
-	Test() // No-args constructor
-		: data {0}
-	{
-		cout<<"No-args constructor called for Test.\n";
-	}
+    Test() // No-args constructor
+        : data {0}
+    {
+        cout<<"No-args constructor called for Test.\n";
+    }
 
-	Test(int data) // Overloaded constructor
-		: data {data}
-	{
-		cout<<"Overloaded constructor called for Test ["<<data<<"]\n";
-	}
+    Test(int data) // Overloaded constructor
+        : data {data}
+    {
+        cout<<"Overloaded constructor called for Test ["<<data<<"]\n";
+    }
 
-	~Test() // Destructor
-	{
-		cout<<"Destructor called for Test ["<<data<<"]\n";
-	}
+    ~Test() // Destructor
+    {
+        cout<<"Destructor called for Test ["<<data<<"]\n";
+    }
 
-	int get_data() const
-	{
-		return data;
-	}
+    int get_data() const
+    {
+        return data;
+    }
 };
 
 int main()
@@ -94,64 +94,64 @@ Properties of unique_ptr:
 4. It can be moved.
 5. When the pointer is destroyed, what it points to is automatically destroyed.
 */
-	unique_ptr<Test> test_1 {new Test {100}}; // Here it is automatically deallocated since it is a smart pointer, also notice that we are passing "new Test {100}" as arguments to the constructor.
+    unique_ptr<Test> test_1 {new Test {100}}; // Here it is automatically deallocated since it is a smart pointer, also notice that we are passing "new Test {100}" as arguments to the constructor.
 
-	cout<<"Test 1: "<<test_1->get_data()<<"\n";
+    cout<<"Test 1: "<<test_1->get_data()<<"\n";
 
-	// unique_ptr<Test> test_0 = new Test {100}; // This will give an error.
+    // unique_ptr<Test> test_0 = new Test {100}; // This will give an error.
 
-	unique_ptr<Test> test_2 = make_unique<Test> (200); // Here overloaded constructor is called. "make_unique<> ()" returns a "unique_ptr". "make_unique" is kind of exception safe.
+    unique_ptr<Test> test_2 = make_unique<Test> (200); // Here overloaded constructor is called. "make_unique<> ()" returns a "unique_ptr". "make_unique" is kind of exception safe.
 
-	cout<<"Test 2: "<<test_2->get_data()<<"\n";
+    cout<<"Test 2: "<<test_2->get_data()<<"\n";
 
-	auto test_3 = make_unique<Test> (300); // See here we can use "auto".
+    auto test_3 = make_unique<Test> (300); // See here we can use "auto".
 
-	cout<<"Test 3: "<<test_3->get_data()<<"\n";
+    cout<<"Test 3: "<<test_3->get_data()<<"\n";
 
-	cout<<"Test 3 is pointing to: "<<test_3.get()<<"\n"; // .get() will return a pointer(this will help if we want to assign to a raw pointer).
+    cout<<"Test 3 is pointing to: "<<test_3.get()<<"\n"; // .get() will return a pointer(this will help if we want to assign to a raw pointer).
 
-	// test_3 = test_2; // This will give an error because "unique_ptr" cannot be assigned. They have clear ownership.
+    // test_3 = test_2; // This will give an error because "unique_ptr" cannot be assigned. They have clear ownership.
 
-	test_3 = move(test_2); // This will move "test_2" to "test_3", "test_2" is now a "nullptr".
+    test_3 = move(test_2); // This will move "test_2" to "test_3", "test_2" is now a "nullptr".
 
-	if(!test_2) // If used in an if statement it checks if it is initialized or not.
-	{
-		cout<<"Test 2 is a null pointer.\n";
-	}
+    if(!test_2) // If used in an if statement it checks if it is initialized or not.
+    {
+        cout<<"Test 2 is a null pointer.\n";
+    }
 
-	Test *test_4 = test_3.get(); // This is possible but not recommended.
+    Test *test_4 = test_3.get(); // This is possible but not recommended.
 
-	cout<<"Test 4: "<<test_4->get_data()<<"\n";
+    cout<<"Test 4: "<<test_4->get_data()<<"\n";
 
-	test_1.reset(); // "test_1" is now a null pointer.
+    test_1.reset(); // "test_1" is now a null pointer.
 
-	if(!test_1)
-	{
-		cout<<"Test 1 is a null pointer.\n";
-	}
+    if(!test_1)
+    {
+        cout<<"Test 1 is a null pointer.\n";
+    }
 
-	vector<unique_ptr<Test>> test_vector;
+    vector<unique_ptr<Test>> test_vector;
 
-	test_vector.push_back(make_unique<Test> (700));
-	test_vector.push_back(make_unique<Test> (800));
-	test_vector.push_back(move(test_3)); // Use move() when using push_back(), otherwise it might crash.
-	// test_vector.push_back(test_4); // This will give an error because vector can only hold "unique_ptr".
+    test_vector.push_back(make_unique<Test> (700));
+    test_vector.push_back(make_unique<Test> (800));
+    test_vector.push_back(move(test_3)); // Use move() when using push_back(), otherwise it might crash.
+    // test_vector.push_back(test_4); // This will give an error because vector can only hold "unique_ptr".
 
 /*
-	for(auto test : test_vector)
-	{
-		cout<<test->get_data()<<"\n"; // This won't compile because we can't copy "unique_ptr".
-	}
+    for(auto test : test_vector)
+    {
+        cout<<test->get_data()<<"\n"; // This won't compile because we can't copy "unique_ptr".
+    }
 */
 
-	cout<<"\n";
+    cout<<"\n";
 
-	for(auto &test : test_vector)
-	{
-		cout<<"Data: "<<test->get_data()<<"\n"; // This will work because we are passing by reference.
-	}
+    for(auto &test : test_vector)
+    {
+        cout<<"Data: "<<test->get_data()<<"\n"; // This will work because we are passing by reference.
+    }
 
-	cout<<"\n";
+    cout<<"\n";
 
-	return 0;
+    return 0;
 }
