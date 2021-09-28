@@ -75,14 +75,14 @@ All iterators are available and invalidate when corresponding element is deleted
 
 /*
 Lists are represented like this:
-        ---------	   ---------	  ---------
-        |		|<-----|	   |<-----|		  |
-        | 	1	|	   |   2   |	  |	  3   |
-        |		|----->|	   |----->|		  |
-        ---------	   ---------	  ---------
-            ^							  ^
-            |							  |
-front()__|							  |__end()
+        ---------      ---------      ---------
+        |       |<-----|       |<-----|       |
+        |   1   |      |   2   |      |   3   |
+        |       |----->|       |----->|       |
+        ---------      ---------      ---------
+            ^                             ^
+            |                             |
+   front()__|                             |__end()
 */
 
     list<int> test_1 {0, 1, 2, 3, 4, 5}; // Using initialization list.

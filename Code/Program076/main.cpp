@@ -98,8 +98,8 @@ The class hierarchy used is:
     Account
         ^
         |
-_____|_____
-|         |
+   _____|_____
+   |         |
 Savings   Checking
 ^
 |

@@ -69,14 +69,14 @@ Reverse iterators are not available, iterators invalidate when corresponding ele
 
 /*
 Forward lists are represented as:
-        ---------	   ---------      ---------
-        |		|      |	   |	  |		  |
-        | 	1	|----->|   2   |----->|	  3   |
-        |		|	   |       |	  |		  |
-        ---------	   ---------	  ---------
+        ---------      ---------      ---------
+        |       |      |       |      |       |
+        |   1   |----->|   2   |----->|   3   |
+        |       |      |       |      |       |
+        ---------      ---------      ---------
             ^
             |
-front() __|
+  front() __|
 */
     forward_list<int> test_1 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 

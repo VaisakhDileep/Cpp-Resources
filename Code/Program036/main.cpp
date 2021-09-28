@@ -26,7 +26,7 @@ int main()
     cout<<"*(scores + 2): "<<*(scores + 2)<<"\n\n";
 
 /*
-        Subscript Notation				Offset Notation
+        Subscript Notation              Offset Notation
         array_name[index]   ------> *(array_name + index)
         pointer_name[index] ------> *(pointer_name + index)
 */

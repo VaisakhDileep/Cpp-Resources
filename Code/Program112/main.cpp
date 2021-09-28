@@ -20,7 +20,6 @@ void display(stack<T> s) // Notice here we are passing by value, since the only 
     T top_elem;
 
     cout<<"[ ";
-
     while(!s.empty())
 
     {
@@ -30,7 +29,6 @@ void display(stack<T> s) // Notice here we are passing by value, since the only 
 
         cout<<top_elem<<" ";
     }
-
     cout<<"]";
 }
 
