@@ -51,7 +51,7 @@ void greet_world()
 Chain of Events:
 ----------------
 1. First "greetings_prototype_1.cpp" will be compiled. "#include "greetings_prototype_1.hpp" will be replaced by the header files contents.
-2. After "greetings_prototype_1.cpp" is compiled "main.cpp" is compiled(header guard fails here since "greetings_prototype_1.cpp" is already compiled, so header guard is no longer active in "main.cpp"). This will create duplicate function and variable definitions which the compiler might not detect.
+2. After "greetings_prototype_1.cpp" is compiled "main.cpp" is compiled(header guard fails here since "greetings_prototype_1.cpp" is already compiled and converted to object code, so header guard is no longer active in "main.cpp"). This will create duplicate function and variable definitions which the compiler might not detect.
 3. "greetings_prototype_1.cpp" is compiled to "greetings_prototype_1.o" and "main.cpp" is compiled to "main.o".
 4. The linker will try to link "greetings_prototype_1.o" and "main.o", but since there are duplicate definitions, it will give a linker error.
 */
