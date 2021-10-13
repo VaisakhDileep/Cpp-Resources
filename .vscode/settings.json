@@ -1,6 +1,7 @@
 {
 	"files.associations": {
-		"algorithm": "cpp",
-		"stl_algobase.h": "c"
-	}
+        "algorithm": "cpp",
+        "stl_algobase.h": "c",
+        "chrono": "cpp"
+    }
 }
