@@ -33,7 +33,7 @@ Conversion table for second to microseconds:
     1 second = 1000000 microseconds
 */
 
-    chrono::microseconds test_1 {1s}; // Here we are trying to case a "chrono::seconds" literal to a "chrono::microseconds" object. Since this conversion is loss-less(won't loose data), implicit conversion will take place.
+    chrono::microseconds test_1 {1s}; // Here we are trying to cast a "chrono::seconds" literal to a "chrono::microseconds" object. Since this conversion is loss-less(won't loose data), implicit conversion will take place.
 
     // chrono::seconds test_2 {10us} // This will give a compiler error, since converting from a "chrono::microseconds" literal to a "chrono::seconds" object will result in a loss of data(rounding when dividing), implicit conversion will not take place here, we need to do it manually.
 
@@ -45,8 +45,8 @@ Conversion table for second to microseconds:
     chrono::microseconds t1 {100us}, t2 {55us}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::microseconds" object and an int object together.
-    result = t1 - 50; // We can't add a "chrono::microseconds" object and an int object together.
+    result = t1 + 50; // We can't add a "chrono::microseconds" object and an int literal together.
+    result = t1 - 50;We can't subtract an "int" literal from a "chrono::microseconds" object or vice-versa.
 */
 
     result = t1 + 5s; // This is possible, chrono will implicitly convert "5s" to "chrono::microseconds".
