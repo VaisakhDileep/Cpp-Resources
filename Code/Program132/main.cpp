@@ -14,7 +14,7 @@ int main()
 {
     chrono::milliseconds milli_s1; // Uninitialized "chrono::milliseconds" variable.
 
-    // chrono::milliseconds s2 = 2; // This is not supported since we can't assign an "int" to "chrono::milliseconds", but we can use c++ list-like initialization to achieve the same.
+    // chrono::milliseconds milli_s2 = 2; // This is not supported since we can't assign an "int" to "chrono::milliseconds", but we can use c++ list-like initialization to achieve the same.
 
     chrono::milliseconds milli_s3 {100}; // We can initialize it with an "int" value only if we use c++ list-like initialization.
 
@@ -22,7 +22,7 @@ int main()
 
     // milli_s4 = 100; // We can't assign an "int" value to a "chrono::milliseconds" object, assignment will only work if they are both "chrono::milliseconds" objects.
 
-    milli_s4 = 100ms; // We can 'ms' literal suffix to assign a "chrono::milliseconds" object with a literal(only works for c++ versions after c++14).
+    milli_s4 = 100ms; // We can use 'ms' literal suffix to assign a "chrono::milliseconds" object with a literal(only works for c++ versions after c++14).
 
     cout<<"milli_s1: "<<milli_s1.count()<<"\n"; // In order to display the "chrono::milliseconds" object, use ".count()" member method.
     cout<<"milli_s3: "<<milli_s3.count()<<"\n";
@@ -35,12 +35,12 @@ Conversion table for second to milliseconds:
 
     chrono::milliseconds test_1 {1s}; // Here we are trying to cast a "chrono::seconds" literal to a "chrono::milliseconds" object. Since this conversion is loss-less(won't loose data), implicit conversion will take place.
 
-    // chrono::seconds test_2 {10ms}; // This will give a compiler error, since converting from a "chrono::milliseconds" literal to a "chrono::seconds" object will result in a loss of data(rounding when dividing), implicit conversion will not take place here, we need to do it personally.
+    // chrono::seconds test_2 {10ms}; // This will give a compiler error, since converting from a "chrono::milliseconds" literal to a "chrono::seconds" object will result in a loss of data(rounding when dividing), implicit conversion will not take place here, we need to do it manually.
 
     chrono::seconds test_3 {chrono::duration_cast<chrono::seconds>(111111ms)}; // See here we lost some data.
 
     cout<<"test_1: "<<test_1.count()<<"\n";
-    cout<<"test_2: "<<test_3.count()<<"\n";
+    cout<<"test_3: "<<test_3.count()<<"\n\n";
 
     chrono::milliseconds t1 {100ms}, t2 {55ms}, result {};
 
@@ -48,6 +48,9 @@ Conversion table for second to milliseconds:
     result = t1 + 50; // We can't add a "chrono::milliseconds" object and an int object together.
     result = t1 - 50; // We can't add a "chrono::milliseconds" object and an int object together.
 */
+
+    result = t1 + 5s; // This is possible, chrono will implicitly convert "5s" to "chrono::milliseconds".
+    result = t1 - 5s; // This is also possible.
 
     result = t1 + t2;
     result = t1 - t2;
