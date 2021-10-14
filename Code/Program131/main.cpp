@@ -51,7 +51,7 @@ int main()
     chrono::seconds t1 {100s}, t2 {55s}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::seconds" object and an int literal together.
+    result = t1 + 50; // We can't add a "chrono::seconds" object and an "int" literal together.
     result = t1 - 50; // We can't subtract an "int" literal from a "chrono::seconds" object or vice-versa.
 */
 
@@ -62,8 +62,8 @@ int main()
     result = t1 / 2;
 
 /*
-    result = t1 * 2.5; // We can only multiply a "chrono::seconds" object with an int value.
-    result = t1 / 2.5; // We can only multiply a "chrono::seconds" object with an int value.
+    result = t1 * 2.5; // We can only multiply a "chrono::seconds" object with an "int" value.
+    result = t1 / 2.5; // We can only divide a "chrono::seconds" object with an "int" value.
 */
 
 /*

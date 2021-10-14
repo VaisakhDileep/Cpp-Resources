@@ -14,7 +14,7 @@ int main()
 {
     chrono::microseconds micro_s1; // Uninitialized "chrono::microseconds" variable.
 
-    // chrono::microseconds micro_s2 = 2; // This is not supported since we can't assign an "int" to "chrono::microseconds", but we can use c++ list-like initializer to achieve the same.
+    // chrono::microseconds micro_s2 = 2; // This is not supported since we can't assign an "int" value to "chrono::microseconds", but we can use c++ list-like initializer to achieve the same.
 
     chrono::microseconds micro_s3 {100}; // We can initialize it with an "int" value only if we use c++ list-like initialization.
 
@@ -45,7 +45,7 @@ Conversion table for second to microseconds:
     chrono::microseconds t1 {100us}, t2 {55us}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::microseconds" object and an int literal together.
+    result = t1 + 50; // We can't add a "chrono::microseconds" object and an "int" literal together.
     result = t1 - 50;We can't subtract an "int" literal from a "chrono::microseconds" object or vice-versa.
 */
 
@@ -59,8 +59,8 @@ Conversion table for second to microseconds:
     result = t1 / 2;
 
 /*
-    result = t1 * 2.5; // We can only multiply a "chrono::microseconds" object with an int value.
-    result = t1 / 2.5; // We can only divide a "chrono::microseconds" object with an int value.
+    result = t1 * 2.5; // We can only multiply a "chrono::microseconds" object with an "int" value.
+    result = t1 / 2.5; // We can only divide a "chrono::microseconds" object with an "int" value.
 */
 
 /*
