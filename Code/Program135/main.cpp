@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    chrono::minutes m1; // Uninitialized "chrono::minutes" variable.
+    chrono::minutes m1; // Uninitialized "chrono::minutes" object.
 
     // chrono::minutes m2 = 2; // This is not supported since we can't assign an "int" value to "chrono::minutes", but we can use c++ list-like initializer to achieve the same.
 

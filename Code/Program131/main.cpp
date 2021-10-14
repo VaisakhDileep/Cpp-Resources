@@ -17,7 +17,7 @@ void display_chrono_seconds(chrono::seconds s)
 
 int main()
 {
-    chrono::seconds s1; // Uninitialized "chrono::seconds" variable.
+    chrono::seconds s1; // Uninitialized "chrono::seconds" object.
 
     // chrono::seconds s2 = 2; // This is not supported since we can't assign an "int" value to "chrono::seconds", but we can use c++ list-like initialization to achieve the same.
 

@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    chrono::milliseconds milli_s1; // Uninitialized "chrono::milliseconds" variable.
+    chrono::milliseconds milli_s1; // Uninitialized "chrono::milliseconds" object.
 
     // chrono::milliseconds milli_s2 = 2; // This is not supported since we can't assign an "int" value to "chrono::milliseconds", but we can use c++ list-like initialization to achieve the same.
 

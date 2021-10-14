@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    chrono::microseconds micro_s1; // Uninitialized "chrono::microseconds" variable.
+    chrono::microseconds micro_s1; // Uninitialized "chrono::microseconds" object.
 
     // chrono::microseconds micro_s2 = 2; // This is not supported since we can't assign an "int" value to "chrono::microseconds", but we can use c++ list-like initializer to achieve the same.
 
@@ -46,7 +46,7 @@ Conversion table for second to microseconds:
 
 /*
     result = t1 + 50; // We can't add a "chrono::microseconds" object and an "int" literal together.
-    result = t1 - 50;We can't subtract an "int" literal from a "chrono::microseconds" object or vice-versa.
+    result = t1 - 50; // We can't subtract an "int" literal from a "chrono::microseconds" object or vice-versa.
 */
 
     result = t1 + 5s; // This is possible, chrono will implicitly convert "5s" to "chrono::microseconds".
