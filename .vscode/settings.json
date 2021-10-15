@@ -2,6 +2,7 @@
 	"files.associations": {
         "algorithm": "cpp",
         "stl_algobase.h": "c",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "ratio": "cpp"
     }
 }
