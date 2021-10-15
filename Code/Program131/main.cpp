@@ -22,6 +22,8 @@ Different time container supported in <chrono>:
 As we go from (6 -> 1), implicit casting happens. Implicit casting does'nt work when we move from (1 -> 6), we have to use explicit casting.
 */
 
+// seconds is the base of the chrono library represented as "chrono::duration<int64_t, ratio<1, 1>>".
+
 void display_chrono_seconds(chrono::seconds s)
 {
     cout<<s.count()<<"\n";
