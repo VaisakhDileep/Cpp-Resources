@@ -133,7 +133,7 @@ else if 1 time_container = 1 / x seconds:
 
     chrono::duration<double, ratio<60, 1>> minutes_double {}; // We can manually do the same for others using "std::ratio<>".
 
-    minutes_double = 1s + 1h + 10ms; // All the values will be first converted to seconds and after getting the result, conversion takes place to minutes.
+    minutes_double = 1s + 1h + 10ms; // All the values will be first converted to seconds and after getting the result, conversion takes place to minutes(no need to do explicit conversion).
 
     cout<<"minutes_double: "<<minutes_double.count()<<"\n";
 
