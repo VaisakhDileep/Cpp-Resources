@@ -45,7 +45,7 @@ Conversion table for minute to seconds:
     chrono::minutes t1 {100min}, t2 {55min}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::minutes" object and an "int" literal together.
+    result = t1 + 50; // We can't add a "chrono::minutes" object and an "int" literal together or vice-versa.
     result = t1 - 50; // We can't subtract an "int" literal from a "chrono::minutes" object or vice-versa.
 */
 

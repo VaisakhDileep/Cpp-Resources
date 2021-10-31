@@ -45,7 +45,7 @@ Conversion table for second to microseconds:
     chrono::microseconds t1 {100us}, t2 {55us}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::microseconds" object and an "int" literal together.
+    result = t1 + 50; // We can't add a "chrono::microseconds" object and an "int" literal together or vice-versa.
     result = t1 - 50; // We can't subtract an "int" literal from a "chrono::microseconds" object or vice-versa.
 */
 

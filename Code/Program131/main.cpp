@@ -11,7 +11,7 @@ Description : This program helps to understand how to represent seconds in C++.
 using namespace std;
 
 /*
-Different time container supported in <chrono>:
+Different time container supported in chrono library:
 1. hours
 2. minutes
 3. seconds
@@ -65,7 +65,7 @@ int main()
     chrono::seconds t1 {100s}, t2 {55s}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::seconds" object and an "int" literal together.
+    result = t1 + 50; // We can't add a "chrono::seconds" object and an "int" literal together or vice-versa.
     result = t1 - 50; // We can't subtract an "int" literal from a "chrono::seconds" object or vice-versa.
 */
 
@@ -127,8 +127,8 @@ int main()
 if 1 time_container = x seconds:
     use std::ratio<x, 1>
 
-else if 1 seconds = x time_container:
-    use std::ratio<1, x>    
+else if 1 time_container = 1 / x seconds:
+    use std::ratio<1, x>
 */
 
     chrono::duration<double, ratio<60, 1>> minutes_double {}; // We can manually do the same for others using "std::ratio<>".

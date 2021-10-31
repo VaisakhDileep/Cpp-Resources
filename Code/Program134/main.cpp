@@ -14,7 +14,7 @@ int main()
 {
     chrono::nanoseconds nano_s1; // Uninitialized "chrono::nanoseconds" object.
 
-    // chrono::nanoseconds nano_s2; // This is not supported since we can't assign an "int" value to "chrono::nanoseconds", but we can use c++ list-like initializer to achieve the same.
+    // chrono::nanoseconds nano_s2 = 2; // This is not supported since we can't assign an "int" value to "chrono::nanoseconds", but we can use c++ list-like initializer to achieve the same.
 
     chrono::nanoseconds nano_s3 {100}; // We can initialize it with an "int" value only if we use c++ list-like initialization.
 
@@ -22,7 +22,7 @@ int main()
 
     // nano_s4 = 100; // We can't assign an "int" value to a "chrono::nanoseconds" object, assignment will only work if they are both "chrono::nanoseconds" objects.
 
-    nano_s4 = 100ns; // We can use 'ns' literal suffix to assign a "chrono::nanoseconds" object with a literal(only works for the c++ versions above c++14).
+    nano_s4 = 100ns; // We can use 'ns' literal suffix to assign a "chrono::nanoseconds" object with a literal(only works for c++ versions above c++14).
 
     cout<<"nano_s1: "<<nano_s1.count()<<"\n"; // In order to display the "chrono::nanoseconds" object, use ".count()" member method.
     cout<<"nano_s3: "<<nano_s3.count()<<"\n";
@@ -45,7 +45,7 @@ Conversion table for second to nano seconds:
     chrono::nanoseconds t1 {100ns}, t2 {55ns}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::nanoseconds" object and an "int" literal together.
+    result = t1 + 50; // We can't add a "chrono::nanoseconds" object and an "int" literal together or vice-versa.
     result = t1 - 50; // We can't subtract an "int" literal from a "chrono::nanoseconds" object or vice-versa.
 */
 

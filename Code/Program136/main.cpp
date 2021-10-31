@@ -45,7 +45,7 @@ Conversion table for hours to seconds:
     chrono::hours t1 {100h}, t2 {55h}, result {};
 
 /*
-    result = t1 + 50; // We can't add a "chrono::hours" object and an "int" literal together.
+    result = t1 + 50; // We can't add a "chrono::hours" object and an "int" literal together or vice-versa.
     result = t1 - 50; // We can't subtract an "int" literal from a "chrono::hours" object or vice-versa.
 */
 
