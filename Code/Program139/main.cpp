@@ -25,11 +25,11 @@ hours: typedef duration<int64_t, ratio<3600, 1>> hours
 /*
 Internally duration<> class is represented as:
 
-template<class Rep, class Period = ratio<1>> // "Period" is the relation of the duration object with seconds. It is given through the ratio<> template.
+template<typename Rep, typename Period = ratio<1>> // "Period" is the relation of the duration object with seconds. It is given through the ratio<> template.
 class duration
 {
     // code ...
-}
+};
 */
 
 int main()

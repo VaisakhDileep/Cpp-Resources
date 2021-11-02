@@ -3,6 +3,7 @@
         "algorithm": "cpp",
         "stl_algobase.h": "c",
         "chrono": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "iostream": "cpp"
     }
 }
