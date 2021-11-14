@@ -4,6 +4,8 @@
         "stl_algobase.h": "c",
         "chrono": "cpp",
         "ratio": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "sstream": "cpp",
+        "typeinfo": "cpp"
     }
 }
