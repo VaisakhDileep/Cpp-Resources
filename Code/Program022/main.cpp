@@ -33,12 +33,16 @@ int main()
 
     string s6 (10, 'O'); // This is constructor type initialization, it will store 'O' 10 times.
 
+    string s7 = "Vaisakh " 
+                "Dileep "; // We can assign a string using multiple lines like this.
+
     cout<<"s1: "<<s1<<"\n";
     cout<<"s2: "<<s2<<"\n";
     cout<<"s3: "<<s3<<"\n";
     cout<<"s4: "<<s4<<"\n";
     cout<<"s5: "<<s5<<"\n";
-    cout<<"s6: "<<s6<<"\n\n";
+    cout<<"s6: "<<s6<<"\n";
+    cout<<"s7: "<<s7<<"\n\n";
 
     string name;
 
