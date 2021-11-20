@@ -128,7 +128,7 @@ int main()
     regex re_16 {"[:alpha:]"}; // "[:alpha:]" is a character class. It will will match any alphabet characters. To know more about character classes refer: https://www.cplusplus.com/reference/regex/ECMAScript/
 
     cout<<"regex_match(\"a\", \"[:alpha:]\"): "<<regex_match("a", re_16)<<"\n"; // This will match.
-    cout<<"regex_match(\"1\", \"[:alpha:]\"): "<<regex_match("1", re_16)<<"\n"; // This won't match.
+    cout<<"regex_match(\"1\", \"[:alpha:]\"): "<<regex_match("1", re_16)<<"\n\n"; // This won't match.
 
     return 0;
 }
