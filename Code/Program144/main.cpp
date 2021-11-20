@@ -68,14 +68,14 @@ int main()
     cout<<"regex_match(\"ab\", \"[abc]\"): "<<regex_match("ab", re_7)<<"\n"; // This won't match, it will only match for any one character inside [...].
     cout<<"regex_match(\"\", \"[abc]\")  : "<<regex_match("", re_7)<<"\n\n"; // This won't match, there should be atleast one character common with [...].
 
-    regex re_8 {"[^abc]"}; // "[^...]" is a special pattern it will match any character except the ones inside []. This regex will match for "b", "c", "d", ...
+    regex re_8 {"[^abc]"}; // "[^...]" is a special pattern it will match any character except the ones inside []. This regex will match for "d", "e", "f", ...
 
     cout<<"regex_match(\"a\", \"[^abc]\") : "<<regex_match("a", re_8)<<"\n"; // This won't match.
     cout<<"regex_match(\"b\", \"[^abc]\") : "<<regex_match("b", re_8)<<"\n"; // This won't match.
     cout<<"regex_match(\"c\", \"[^abc]\") : "<<regex_match("c", re_8)<<"\n"; // This won't match.
     cout<<"regex_match(\"d\", \"[^abc]\") : "<<regex_match("d", re_8)<<"\n"; // This will match.
-    cout<<"regex_match(\"dd\", \"[^abc]\"): "<<regex_match("dd", re_8)<<"\n"; // This won't match, it will only match for one character inside [...].
-    cout<<"regex_match(\"\", \"[^abc]\")  : "<<regex_match("", re_8)<<"\n\n"; // This won't match, there should be atleast one character common with [...].
+    cout<<"regex_match(\"dd\", \"[^abc]\"): "<<regex_match("dd", re_8)<<"\n"; // This won't match, it will only match for one character not inside [...].
+    cout<<"regex_match(\"\", \"[^abc]\")  : "<<regex_match("", re_8)<<"\n\n"; // This won't match, there should be atleast one character not common with [...].
 
     regex re_9 {"abc{3}"}; // "{n}" is a special pattern it will match exactly 'n' instaces of the preceeding character('c'). This regex will match only for "abccc".
 
