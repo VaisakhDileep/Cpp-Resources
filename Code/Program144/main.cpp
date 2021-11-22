@@ -12,6 +12,16 @@ using namespace std;
 
 // Regular Expression: It is a specific pattern that provides concise and flexible means to match strings of text(particular characters, words, patterns).
 
+/*
+The different Regular Expression Grammars are:
+1. ECMAScript -> We are using this one.
+2. basic
+3. extended
+4. awk
+5. grep
+6. egrep
+*/
+
 int main()
 {
 // regex_match(): It will check whether the target sequence matches the regular expression.
@@ -118,8 +128,8 @@ int main()
     regex re_15 {"(a)(b)\\*\\2\\1"}; // "()" groups can be reassigned again by the index of the opening bracket('('). We use the escape sequence with the index value(indexing starts from '1'). This regex will match only for "ab*ba".
 
 /*
-    1  2            ------------> How indexing happens.
-    (a)(b)\\*\\2\\1 ------------> (a)(b)\\*(b)(a) -> Result.
+    1  2            ----------> How indexing happens.
+    (a)(b)\\*\\2\\1 ----------> (a)(b)\\*(b)(a) -> Result.
 */
 
     cout<<"regex_match(\"ab*ba\", \"(a)(b)\\*\\2\\1\"): "<<regex_match("ab*ba", re_15)<<"\n"; // This will match.
