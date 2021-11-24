@@ -12,6 +12,8 @@ Description : This program helps to understand C++ strings.
 
 #include<limits>
 
+#include<cstring>
+
 using namespace std;
 
 int main()
@@ -174,6 +176,21 @@ getline() vs std::cin.getline():
 In std::cin.getline(), getline() is a member function of cin. It is mainly used for C-style strings.
 In getline(cin, ..), getline is a free function. It is mainly used for C++ strings.
 */
+
+// c_str(): It is used to get the underlying C-style string.
+    string director {"Zachariah Trench"};
+
+    const char *director_c_string_immutable {director.c_str()}; // The result will be of "const char *", so we can't manipulate it.
+
+    cout<<"director_c_string_immutable: "<<director_c_string_immutable<<"\n";
+
+    char director_c_string_mutable[] {};
+
+    strcpy(director_c_string_mutable, director_c_string_immutable); // Inorder to make it mutable we can make a copy.
+
+    director_c_string_mutable[10] = 'D';
+
+    cout<<"director_c_string_mutable  : "<<director_c_string_mutable<<"\n\n";
 
 // Substitution Cipher.
     string  alphabets {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
