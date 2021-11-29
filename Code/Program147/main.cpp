@@ -90,20 +90,55 @@ Generally "format specifier" is represented as:
     printf("float_variable(exponential format): %E\n\n", float_variable); // For printing float variables in exponential format(upper-case), we use '%E' as the format specifier.
 // Note: '%e' and '%E' is also applicable for "float" and "double".
 
+    int *int_ptr {new int {0}};
+
+    float *float_ptr {new float {0.0}};
+
+    double *double_ptr {new double {0.0}};
+
+    printf("*int_ptr   : %p\n", int_ptr); // Inorder to print the memory address(hexadecimal representation), we use '%p' as the format specifier.
+    printf("*float_ptr : %p\n", float_ptr);
+    printf("*double_ptr: %p\n\n", double_ptr); // Similarly for other data-types.
+
+    printf("&int_variable   : %p\n", (void *)(&int_variable)); // If we are '&' to extract the memory address, then make sure to convert it to "void *".
+    printf("&float_variable : %p\n", (void *)(&float_variable));
+    printf("&double_variable: %p\n\n", (void *)(&double_variable)); // Similarly for other data-types.
+
+// Difference between '%f', '%e' and '%g': If the exponent value is lesser than or greater than the precision '%g' will default to '%e' else it will be represented using '%f'. If there are any padded '0's, it will removed when using '%g'.
+
+    float_variable = 0.0001;
+
+    printf("float_variable(0.0001): %f\n", float_variable);
+    printf("float_variable(0.0001): %e\n", float_variable);
+    printf("float_variable(0.0001): %g\n\n", float_variable); // Notice here that all the padded '0's which were present when using '%f' were removed. '%g' format is similar to '%f'.
+
+    float_variable = 0.00001;
+
+    printf("float_variable(0.00001): %f\n", float_variable);
+    printf("float_variable(0.00001): %e\n", float_variable);
+    printf("float_variable(0.00001): %g\n", float_variable); // Notice here that all the padded '0's which were present when using '%e' were removed.'%g' format is similar to '%e'.
+    printf("float_variable(0.00001): %G\n\n", float_variable); // '%G' will use the upper-case exponential format.
+
+    float_variable = 100000.0001;
+
+    printf("float_variable(0.00001): %f\n", float_variable);
+    printf("float_variable(0.00001): %e\n", float_variable);
+    printf("float_variable(0.00001): %g\n\n", float_variable);
+
 // flags supported in printf():
     int_variable = 15;
 
-    printf("int_variable(octal form): %#o\n\n", int_variable); // '#' is the octal flag. It will add '0' before the octal representation.
+    printf("int_variable(octal form)     : %#o\n", int_variable); // '#' is the octal flag. It will add '0' before the octal representation.
 
-    printf("int_variable(hexadecimal): %#x\n\n", int_variable); // '#' is also the hexadecimal flag. It will add '0x' before the hexadecimal representation.
+    printf("int_variable(hexadecimal)    : %#x\n", int_variable); // '#' is also the hexadecimal flag. It will add '0x' before the hexadecimal representation.
 
-    printf("int_variable(right justified): %10d\n\n", int_variable); // By default the values printed are right justified.
+    printf("int_variable(right justified): %10d\n", int_variable); // By default the values printed are right justified.
 
-    printf("int_variable(left justified): %-10d\n\n", int_variable); // '-' will left justify the value.
+    printf("int_variable(left justified) : %-10d\n", int_variable); // '-' will left justify the value.
 
-    printf("int_variable(zero padded): %010d\n\n", int_variable); // Adding '0' after '%' will pad the extra spaces with '0'(right-justified, so the '0's will added in the beginning).
+    printf("int_variable(zero padded)    : %010d\n", int_variable); // Adding '0' after '%' will pad the extra spaces with '0'(right-justified, so the '0's will added in the beginning).
 
-    printf("int_variable(signed): %+d\n\n", int_variable); // '+' will add a positive sign before positive numbers.
+    printf("int_variable(with sign)      : %+d\n\n", int_variable); // '+' will add a positive sign before positive numbers.
 
 // width field: It is the minimum width required to display the value.
     int_variable = 100;
@@ -116,9 +151,11 @@ Generally "format specifier" is represented as:
     float_variable = 12.77777777777777777777;
 
     printf("float_variable(precision = default): %f\n", float_variable); // By default the precision is '6'. The last decimal digit will rounded.
-    printf("float_variable(precision = 2): %.2f\n", float_variable); // Inorder to have a precision of '2' we need to use '.2' before the format specifier.
+    printf("float_variable(precision = 2)      : %.2f\n\n", float_variable); // Inorder to have a precision of '2' we need to use '.2' before the format specifier.
 
-    float_variable = 0.1;
+    int printf_output {printf("Object of Power\n")}; // printf() outputs the number of characters successfully outputted to the console.
+
+    cout<<"printf_output: "<<printf_output<<"\n";
 
     return 0;
 }

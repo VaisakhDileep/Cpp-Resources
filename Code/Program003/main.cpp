@@ -30,6 +30,32 @@ namespace secondSpace // Custom namespace
     }
 }
 
+namespace thirdSpace // namespace definition must be done in global scope, or should be nested inside another namespace.
+{
+    void func()
+    {
+        cout<<"Inside third namespace."<<endl;
+    }
+
+    namespace nestedThirdSpace
+    {
+        void func()
+        {
+            cout<<"Inside nested third namespace."<<endl;
+        }
+    }
+}
+
+// Namespace aliases: It allows us to use alternate name for a namespace.
+
+namespace ts_1 = thirdSpace; // We can now use "ts_1" instead of "thirdSpace".
+
+namespace ts_2 = ::thirdSpace;
+
+namespace nts_1 = thirdSpace::nestedThirdSpace;
+
+namespace nts_2 = ::thirdSpace::nestedThirdSpace;
+
 int main()
 {
 // Namespace: It is a declarative region that provides a scope to the identifiers inside it. They are used to organize code.
@@ -46,6 +72,16 @@ int main()
     using namespace firstSpace;
 
     // func(); // Here the compiler doesn't know which namespace to look at.
+
+    cout<<"\n";
+
+    ts_1::func();
+    ts_2::func();
+
+    cout<<"\n";
+
+    nts_1::func();
+    nts_2::func();
 
     return 0;
 }
