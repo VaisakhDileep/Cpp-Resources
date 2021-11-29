@@ -14,7 +14,7 @@ using std::cin;
 using std::endl;
 */
 
-namespace firstSpace // Custom namespace
+namespace first_space // Custom namespace
 {
     void func()
     {
@@ -22,7 +22,7 @@ namespace firstSpace // Custom namespace
     }
 }
 
-namespace secondSpace // Custom namespace
+namespace second_space // Custom namespace
 {
     void func()
     {
@@ -30,14 +30,14 @@ namespace secondSpace // Custom namespace
     }
 }
 
-namespace thirdSpace // namespace definition must be done in global scope, or should be nested inside another namespace.
+namespace third_space // namespace definition must be done in global scope, or should be nested inside another namespace.
 {
     void func()
     {
         cout<<"Inside third namespace."<<endl;
     }
 
-    namespace nestedThirdSpace
+    namespace nested_third_space
     {
         void func()
         {
@@ -48,13 +48,25 @@ namespace thirdSpace // namespace definition must be done in global scope, or sh
 
 // Namespace aliases: It allows us to use alternate name for a namespace.
 
-namespace ts_1 = thirdSpace; // We can now use "ts_1" instead of "thirdSpace".
+namespace ts_1 = third_space; // We can now use "ts_1" instead of "third_space".
 
-namespace ts_2 = ::thirdSpace;
+namespace ts_2 = ::third_space;
 
-namespace nts_1 = thirdSpace::nestedThirdSpace;
+namespace nts_1 = third_space::nested_third_space;
 
-namespace nts_2 = ::thirdSpace::nestedThirdSpace;
+namespace nts_2 = ::third_space::nested_third_space;
+
+namespace fourth_space
+{
+    int ten {10};
+
+    void print_ten(); // This is a function declaration.
+}
+
+void fourth_space::print_ten() // This is how to define a function whose declaration is inside a namespace.
+{
+    cout<<"ten: "<<ten<<"\n"; // Notice here we don't have to use "fourth_space::ten", but can just use "ten".
+}
 
 int main()
 {
@@ -62,14 +74,14 @@ int main()
 
     cout<<"Inside main function."<<endl; // See here we don't have to include "std::" anywhere.
 
-    firstSpace::func(); // '::' is the scope resolution operator.
-    secondSpace::func();
+    first_space::func(); // '::' is the scope resolution operator.
+    second_space::func();
 
-    using namespace secondSpace; // This makes "func()" default to "secondSpace" namespace, don't have to include "secondSpace::".
+    using namespace second_space; // This makes "func()" default to "second_space" namespace, don't have to include "second_space::".
 
     func();
 
-    using namespace firstSpace;
+    using namespace first_space;
 
     // func(); // Here the compiler doesn't know which namespace to look at.
 
@@ -82,6 +94,10 @@ int main()
 
     nts_1::func();
     nts_2::func();
+
+    cout<<"\n";
+
+    fourth_space::print_ten();
 
     return 0;
 }
