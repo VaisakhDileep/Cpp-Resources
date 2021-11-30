@@ -104,7 +104,7 @@ Generally "format specifier" is represented as:
     printf("&float_variable : %p\n", (void *)(&float_variable));
     printf("&double_variable: %p\n\n", (void *)(&double_variable)); // Similarly for other data-types.
 
-// Difference between '%f', '%e' and '%g': If the exponent value is lesser than or greater than the precision '%g' will default to '%e' else it will be represented using '%f'. If there are any padded '0's, it will removed when using '%g'.
+// Difference between '%f', '%e' and '%g': If the exponent value is lesser than -4 or greater than the precision '%g' will default to '%e' else it will be represented using '%f'. If there are any padded '0's, it will removed when using '%g'.
 
     float_variable = 0.0001;
 
@@ -121,16 +121,23 @@ Generally "format specifier" is represented as:
 
     float_variable = 100000.0001;
 
-    printf("float_variable(0.00001): %f\n", float_variable);
-    printf("float_variable(0.00001): %e\n", float_variable);
-    printf("float_variable(0.00001): %g\n\n", float_variable);
+    printf("float_variable(100000.0001): %f\n", float_variable);
+    printf("float_variable(100000.0001): %e\n", float_variable);
+    printf("float_variable(100000.0001): %g\n\n", float_variable); // "100000.0001" in exponential form is "1.000000001 * 10^9", since the default precision is '6', it is rounded to "100000".
+
+    float_variable = 1000000.0001;
+
+    printf("float_variable(1000000.0001): %f\n", float_variable);
+    printf("float_variable(1000000.0001): %e\n", float_variable);
+    printf("float_variable(1000000.0001): %g\n", float_variable); // "1000000.0001" in exponential form is "1.00000000001 * 10^10", since the default precision is '6', it is rounded to "1 * 10^6".
+    printf("float_variable(1000000.0001): %.7g\n\n", float_variable); // Notice here that since we increased precision to '7', it is displayed in decimal format.
 
 // flags supported in printf():
     int_variable = 15;
 
-    printf("int_variable(octal form)     : %#o\n", int_variable); // '#' is the octal flag. It will add '0' before the octal representation.
+    printf("int_variable(octal form)     : %#o\n", int_variable); // '#o' is the octal flag. It will add '0' before the octal representation.
 
-    printf("int_variable(hexadecimal)    : %#x\n", int_variable); // '#' is also the hexadecimal flag. It will add '0x' before the hexadecimal representation.
+    printf("int_variable(hexadecimal)    : %#x\n", int_variable); // '#x' is also the hexadecimal flag. It will add '0x' before the hexadecimal representation.
 
     printf("int_variable(right justified): %10d\n", int_variable); // By default the values printed are right justified.
 
@@ -143,14 +150,14 @@ Generally "format specifier" is represented as:
 // width field: It is the minimum width required to display the value.
     int_variable = 100;
 
-    printf("int_variable(width = 1): %1d\n", int_variable); // '1' is the minimum width, but our input is already has a width of '3'. So '3' is chosen as the width to be displayed.
+    printf("int_variable(width = 1): %1d\n", int_variable); // '1' is the minimum width, but our input already has a width of '3'. So '3' is chosen as the width to be displayed.
     printf("int_variable(width = 3): %3d\n", int_variable);
     printf("int_variable(width = 5): %5d\n\n", int_variable); // By default the value to be printed is right justified.
 
-// precision field: It determines the accuracy of the real numbers. It is the number of digits after the decimal 
+// precision field: It determines the accuracy of the real number. It is the number of digits after the decimal point.
     float_variable = 12.77777777777777777777;
 
-    printf("float_variable(precision = default): %f\n", float_variable); // By default the precision is '6'. The last decimal digit will rounded.
+    printf("float_variable(precision = default): %f\n", float_variable); // By default the precision is '6'. The last decimal digit will be rounded.
     printf("float_variable(precision = 2)      : %.2f\n\n", float_variable); // Inorder to have a precision of '2' we need to use '.2' before the format specifier.
 
     int printf_output {printf("Object of Power\n")}; // printf() outputs the number of characters successfully outputted to the console.
