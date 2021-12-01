@@ -8,9 +8,9 @@ Description : This program helps to understand pointer to functions in C++.
 
 using namespace std;
 
-void empty()
+void test()
 {
-    cout<<"Inside the empty function .... \n";
+    cout<<"Inside the test function .... \n";
 }
 
 void function1()
@@ -36,18 +36,19 @@ Syntax for declaring function pointers:
     Return_Type(*FuncPtr)(Parameter_1_Type, Parameter_2_Type); // --> This function pointers can point to any function that takes two parameters(of type "Parameter_1_Type" and "Parameter_2_Type") and returns a value(of type "Return_Type").
 */
 
-    cout<<"Address of the main function: "<<main<<"\n"; // Function name corresponds to the memory address of the function.
-    cout<<"Address of the main function: "<<&main<<"\n\n"; // Or we could use &(address of) operator.
+    printf("Address of the main(): %p\n", main); // Function name corresponds to the memory address of the function. Inorder to get the result we need to use the "printf()" function.
+    printf("Address of the main(): %#x\n", main); // The above result is same as this, so the result is in hexadecimal format.
+    printf("Address of the main(): %p\n\n", &main); // We could also use the &(address of) operator before the function name.
 
-    cout<<"Address of empty function: "<<&empty<<"\n\n";
+    printf("Address of test(): %#x\n\n", test);
 
     int(*fun_add_ptr)(int, int); // Declaring the function pointer.
 
     fun_add_ptr = add; // "fun_add_ptr" is pointing to the "add" function.
 
-    cout<<"Address of add function: "<<&add<<"\n\n";
+    printf("Address of add(): %#x\n\n", add);
 
-    cout<<"Address stored in fun_add_ptr: "<<fun_add_ptr<<"\n\n";
+    printf("Address stored in fun_add_ptr: %#x\n\n", fun_add_ptr);
 
     int sum = fun_add_ptr(3, 2);
 
@@ -63,7 +64,7 @@ Syntax for declaring function pointers:
 
     fun_swap_ptr(&x, &y);
 
-    cout<<"x: "<<x<<"\ty: "<<y<<"\n";
+    cout<<"x: "<<x<<"\ty: "<<y<<"\n\n";
 
 /*
 Passing functions as arguments: We can pass function as arguments using function pointers.
