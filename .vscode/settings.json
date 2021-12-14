@@ -9,7 +9,8 @@
         "typeinfo": "cpp",
         "utility": "cpp",
         "ctime": "cpp",
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "thread": "cpp"
     },
     "cSpell.words": [
         "abca",
