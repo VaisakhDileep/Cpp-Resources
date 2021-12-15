@@ -71,6 +71,8 @@ Syntax for creating a thread:
 
     thread thread_2(sum_first_n_odd, n);
 
+// Note: If we create multiple threads at the same time it doesn't guarantee which one will start first. Here either "thread_1" or "thread_2" will start first.
+
     thread_1.join(); // This will wait for "thread_1" to finish executing so that it can proceed executing the main thread.
     thread_2.join(); // This will wait for "thread_2" to finish executing so that it can proceed executing the main thread.
 

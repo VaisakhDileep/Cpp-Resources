@@ -17,6 +17,8 @@ private:
     }
 public:
     int (Computer::*pRAM)(int) = &Computer::RAM; // Notice here we can access the private member function using function pointers.
+
+    // int (Computer::*pRAM)(int) = Computer::RAM; // We can also use "Computer::RAM" instead of "&Computer::RAM".
 };
 
 int main()

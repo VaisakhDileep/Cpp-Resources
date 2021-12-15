@@ -10,7 +10,8 @@
         "utility": "cpp",
         "ctime": "cpp",
         "cstdio": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "tuple": "cpp"
     },
     "cSpell.words": [
         "abca",
