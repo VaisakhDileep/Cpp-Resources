@@ -153,7 +153,7 @@ C++11 allows explicit inheritance of base 'non-special' constructors by using th
         cout<<"Overloaded constructor for derived class(prototype 1): \n";
 
         Derived_1 test_2_derived_1 {100}; // Step through the debugger to understand this line of code.
-                                        // Overloaded constructor called for derived class(no-args constructor called for base class).
+                                          // Overloaded constructor called for derived class(no-args constructor called for base class).
     }
 
     cout<<"\n\n";
