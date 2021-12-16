@@ -149,4 +149,4 @@ Program148: [This program helps to understand '%n' special format specifier in p
 Program149:[stl] [This program helps to understand std::bitset in C++.](../Program149/main.cpp)<br>
 Program150:[thread] [This program helps to understand threading in C++.](../Program150/main.cpp)<br>
 Program151:[thread] [This program helps to understand the different ways to create a thread in C++.](../Program151/main.cpp)<br>
-Program152:[thread] []()<br>
+Program152:[thread] [This program helps to understand join(), detach() and joinable() in C++.](../Program152/main.cpp)<br>
