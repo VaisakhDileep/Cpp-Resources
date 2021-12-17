@@ -24,16 +24,18 @@ void deposit_money_1(unsigned long long deposit) // without "mutex".
 
 mutex m {}; // Make sure to make the mutex key global, so that they can be shared across multiple threads.
 
+// mutex are not copyable and not movable.
+
 void deposit_money_2(unsigned long long deposit) // with "mutex".
 {
-    m.lock();
-
     for(int i {0}; i < deposit; i++)
     {
-        balance++; // This line of code(block of code) is the race condition(critical section). Which ever thread starts the "deposit_money_2" function will be allowed to update "balance" while the other thread will be locked.
-    }
+        m.lock();
 
-    m.unlock();
+        balance++; // This line of code(block of code) is the race condition(critical section). Which ever thread starts the "deposit_money_2" function will be allowed to update "balance" while the other thread will be locked.
+
+        m.unlock();
+    }
 }
 
 // Note: race condition is a situation where two or more threads/processes happen to change a common data at the same time.
