@@ -62,7 +62,7 @@ int main()
     t3.join();
     t4.join();
 
-    cout<<"balance: "<<balance<<"\n";
+    cout<<"balance: "<<balance<<"\n"; // We get the desired output here.
 
     return 0;
 }
