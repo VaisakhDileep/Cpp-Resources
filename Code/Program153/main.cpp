@@ -45,7 +45,6 @@ void deposit_money_2(unsigned long long deposit) // with "mutex".
 int main()
 {
     thread t1 {deposit_money_1, 100000000};
-
     thread t2 {deposit_money_1, 100000000};
 
     t1.join();
@@ -56,7 +55,6 @@ int main()
     balance = 0;
 
     thread t3 {deposit_money_2, 100000000};
-
     thread t4 {deposit_money_2, 100000000};
 
     t3.join();

@@ -47,7 +47,6 @@ void test_function()
 int main()
 {
     thread t1 {counter, 10000};
-
     thread t2 {counter, 10000};
 
     t1.join();
