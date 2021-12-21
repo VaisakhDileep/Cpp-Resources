@@ -29,7 +29,22 @@ void recursive_counter(unsigned long long num)
 
     recursive_counter(--num);
 
-    m_1.unlock(); // Suppose we have locked the mutex 'n' times then we have to unlock the mutex 'n' times as well, otherwise it will still be in lock state.
+    m_1.unlock(); // Suppose we have locked the "recursive_mutex" 'n' times then we have to unlock the same "recursive_mutex" 'n' times as well, otherwise it will still be in the lock state.
+}
+
+void iterative_counter(unsigned long long num)
+{
+    for(int i {0}; i < num; i++) // We don't necessary have to use recursion in order to use "recursive_mutex".
+    {
+        m_1.lock();
+
+        count++;
+    }
+
+    for(int i {0}; i < num; i++) // We have to unlock the "recursive_mutex" the same number of times that we have locked it.
+    {
+        m_1.unlock();
+    }
 }
 
 int main()
@@ -39,6 +54,16 @@ int main()
 
     t1.join();
     t2.join();
+
+    cout<<"count: "<<count<<"\n\n";
+
+    count = 0;
+
+    thread t3 {recursive_counter, 10000};
+    thread t4 {recursive_counter, 10000};
+
+    t3.join();
+    t4.join();
 
     cout<<"count: "<<count<<"\n";
 
