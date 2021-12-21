@@ -38,6 +38,17 @@ void deposit_money_2(unsigned long long deposit) // with "mutex".
     }
 }
 
+void deadlock()
+{
+    m.lock();
+    m.lock(); // The thread will be locked here indefinitely.
+
+// Note: Calling "mutex::lock()" on the same thread more than once without unlocking will result in a deadlock.
+
+    m.unlock();
+    m.unlock();
+}
+
 // Note: race condition is a situation where two or more threads/processes happen to change a common data at the same time.
 
 // Note: critical section is the protected section that we have to protect if there is a race condition.
@@ -61,6 +72,8 @@ int main()
     t4.join();
 
     cout<<"balance: "<<balance<<"\n"; // We get the desired output here.
+
+    // deadlock(); // This function will create a deadlock.
 
     return 0;
 }
