@@ -334,7 +334,21 @@ All iterators are available and may invalidate.
 
     cout<<boolalpha;
 
-    cout<<"test_1.empty()[after clearing the vector]: "<<test_1.empty()<<"\n";
+    cout<<"test_1.empty()[after clearing the vector]: "<<test_1.empty()<<"\n\n";
+
+// Comparison operators on std::vector:
+    vector<int> vec_1 {1, 2, 3, 4};
+    vector<int> vec_2 {1, 2, 3, 4};
+    vector<int> vec_3 {3, 4};
+
+    cout<<"vec_1 == vec_2: "<<(vec_1 == vec_2)<<"\n"; // '==' checks if the two vector objects are equal(should have the same number of elements and the corresponding elements should be equal).
+    cout<<"vec_1 == vec_3: "<<(vec_1 == vec_3)<<"\n\n";
+
+    cout<<"vec_1 < vec_3 : "<<(vec_1 < vec_3)<<"\n"; // Comparison is done lexicographically(like in a dictionary).
+    cout<<"vec_1 <= vec_2: "<<(vec_1 <= vec_2)<<"\n\n"; // Comparison is done lexicographically.
+
+    cout<<"vec_1 > vec_3 : "<<(vec_1 > vec_3)<<"\n"; // Comparision is done lexicographically.
+    cout<<"vec_1 >= vec_2: "<<(vec_1 >= vec_2)<<"\n\n"; // Comparison is done lexicographically.
 
     return 0;
 }

@@ -27,6 +27,8 @@ void deposit_money(unsigned long long deposit)
         balance++;
     }
 // Note: We can't explicitly call unlock on "lock_guard" objects, it will be automatically called when the scope is terminated.
+
+// Note: "lock_guard<>" objects cannot be moved or copied.
 }
 
 int main()
