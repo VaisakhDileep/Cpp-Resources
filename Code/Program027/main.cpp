@@ -8,7 +8,9 @@ Description : This program helps to understand default argument values in C++ us
 
 using namespace std;
 
-double calc_cost(double base_cost, double tax_rate = 0.06, double shipping_cost = 10.0); // It's best practice to add default valued parameters during function prototyping.
+double calc_cost(double base_cost, double tax_rate = 0.06, double shipping_cost = 10.0); // It's best practice to add default valued parameters during function prototyping(function declaration).
+
+// Suppose we have the declaration file and the definition file separate, then we have to provide the default valued parameters in the declaration file, otherwise it will given a compiler error.
 
 int main()
 {
@@ -29,6 +31,13 @@ int main()
 
     return 0;
 }
+
+/*
+double calc_cost(double base_cost, double tax_rate, double shipping_cost = 10.0) // Adding default value to both function definition and function declaration will given a compiler error.
+{
+    return base_cost += (base_cost * tax_rate) + shipping_cost;
+}
+*/
 
 double calc_cost(double base_cost, double tax_rate, double shipping_cost)
 {
