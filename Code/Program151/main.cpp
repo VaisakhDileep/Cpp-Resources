@@ -10,13 +10,15 @@ Description : This program helps to understand the different ways to create a th
 
 using namespace std;
 
-void function_1(int x, int *y, int &z)
+void function_1(int x, int *y, int &z, int &&l)
 {
     cout<<"x: "<<x<<"\n";
 
     cout<<"y: "<<*y<<"\n";
 
-    cout<<"z: "<<z<<"\n\n";
+    cout<<"z: "<<z<<"\n";
+
+    cout<<"l: "<<l<<"\n\n";
 
     (*y)++;
 
@@ -81,7 +83,8 @@ int main()
 
     cout<<"thread 1: \n";
 
-    thread t1 {function_1, x, &y, std::ref(z)}; // Inorder to pass a variable by reference we have to use "std::ref()". The first parameter is the function name followed by the list of parameters.
+    thread t1 {function_1, x, &y, std::ref(z), std::move(40)}; // Inorder to pass a variable by reference we have to use "std::ref()". The first parameter is the function name followed by the list of parameters.
+                                                               // Inorder to pass a r-value, we have to use "std::move()".
 
     t1.join();
 

@@ -31,6 +31,24 @@ void deposit_money(unsigned long long deposit)
 // Note: "lock_guard<>" objects cannot be moved or copied.
 }
 
+unsigned long long count {};
+
+recursive_mutex m_2;
+
+void recursive_counter(unsigned long long num)
+{
+    if(num <= 0)
+    {
+        return ;
+    }
+
+    lock_guard<recursive_mutex> lock_g {m_2};
+
+    count++;
+
+    recursive_counter(--num);
+} // Notice here we don't have to manually unlock the "lock_guard" object at the end of each function call.
+
 int main()
 {
     thread t1 {deposit_money, 100000000};
@@ -39,7 +57,15 @@ int main()
     t1.join();
     t2.join();
 
-    cout<<"balance: "<<balance<<"\n";
+    cout<<"balance: "<<balance<<"\n\n";
+
+    thread t3 {recursive_counter, 10000}; // In my os it will fail for large values("lock_guard" fails after a certain number of function calls).
+    thread t4 {recursive_counter, 10000}; // In my os it will fail for large values.
+
+    t3.join();
+    t4.join();
+
+    cout<<"count: "<<count<<"\n";
 
     return 0;
 }

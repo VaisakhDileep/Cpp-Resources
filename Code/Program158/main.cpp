@@ -77,6 +77,24 @@ void deposit_money_4(unsigned long long deposit, int id)
     }
 }
 
+recursive_mutex m_2 {};
+
+unsigned long long count {};
+
+void recursive_counter(unsigned long long num)
+{
+    if(num <= 0)
+    {
+        return ;
+    }
+
+    unique_lock<recursive_mutex> lock_g {m_2};
+
+    count++;
+
+    recursive_counter(--num);
+} // Notice here we don't have to manually unlock the "unique_lock" object at the end of each function call.
+
 int main()
 {
 // "unique_lock<>" is a mutex ownership wrapper.
@@ -126,7 +144,15 @@ The features of "unique_lock<>" are:
     t7.join();
     t8.join();
 
-    cout<<"\nbalance: "<<balance<<"\n";
+    cout<<"\nbalance: "<<balance<<"\n\n";
+
+    thread t9 {recursive_counter, 10000}; // In my os it will fail for large values("unique_lock" fails after a certain number of function calls).
+    thread t10 {recursive_counter, 10000}; // In my os it will fail for large values.
+
+    t9.join();
+    t10.join();
+
+    cout<<"count: "<<count<<"\n";
 
     return 0;
 }

@@ -158,3 +158,4 @@ Program157:[thread] [This program helps to understand lock_guard in C++.](../Pro
 Program158:[thread] [This program helps to understand unique_lock in C++.](../Program158/main.cpp)<br>
 Program159:[thread] [This program helps to understand conditional variables in C++.](../Program159/main.cpp)<br>
 Program160:[thread] [This program helps to understand deadlock in C++.](../Program160/main.cpp)<br>
+Program161:[thread] [This program helps to understand std::lock() in C++.](../Program161/main.cpp)<br>
