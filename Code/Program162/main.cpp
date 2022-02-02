@@ -49,13 +49,13 @@ int main()
     future<unsigned long long> future_element {promise_element.get_future()};
 
     thread t1 {counter, std::ref(promise_element), 10'00'00'000};
-    cout<<"start of t1: \n\n";
+    cout<<"*****start of t1***** \n";
 
-    cout<<"future_element.get(): "<<future_element.get()<<"\n\n"; // Notice here that we get the result even before 't1' finishes executing.
+    cout<<"future_element.get(): "<<future_element.get()<<"\n"; // Notice here that we get the result even before 't1' finishes executing.
 
     t1.join();
 
-    cout<<"end of t1:\n";
+    cout<<"*****end of t1*****\n";
 
     return 0;
 }
