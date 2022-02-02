@@ -12,7 +12,8 @@
         "cstdio": "cpp",
         "thread": "cpp",
         "tuple": "cpp",
-        "condition_variable": "cpp"
+        "condition_variable": "cpp",
+        "cctype": "cpp"
     },
     "cSpell.words": [
         "abca",

@@ -36,14 +36,14 @@ void recursive_counter(unsigned long long num, int id)
 
 void iterative_counter(unsigned long long num)
 {
-    for(int i {0}; i < num; i++) // We don't necessary have to use recursion in order to use "recursive_mutex".
+    for(unsigned long long i {0}; i < num; i++) // We don't necessary have to use recursion in order to use "recursive_mutex".
     {
         m_1.lock();
 
         count++;
     }
 
-    for(int i {0}; i < num; i++) // We have to unlock the "recursive_mutex" the same number of times that we have locked it.
+    for(unsigned long long i {0}; i < num; i++) // We have to unlock the "recursive_mutex" the same number of times that we have locked it.
     {
         m_1.unlock();
     }
