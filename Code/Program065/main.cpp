@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 8, January, 2021
-Description : This program helps to understand pointer to member functions in C++.
+Description : This program helps to understand pointer to member methods in C++.
 */
 
 #include<iostream>
@@ -46,7 +46,7 @@ public:
 
         void (Car::*display_top_speed)() {print_car_top_speed};
 
-        (this->*display_car_name)(); // When dealing with function pointers to member methods, we have to invoke(call) it using it's object pointer("this").
+        (this->*display_car_name)(); // When dealing with function pointers to member methods, we have to invoke(call) it using it's object pointer("this"). (->*) --> Pointer to member operation.
 
         (this->*display_top_speed)();
     }
@@ -64,7 +64,7 @@ Syntax for function call:
 */
     Computer Acer;
 
-    cout<<"RAM: "<<(Acer.*Acer.pRAM)(16)<<"\n\n";
+    cout<<"RAM: "<<(Acer.*Acer.pRAM)(16)<<"\n\n"; // (.*) --> Pointer to member operation.
 
     Car BMW {};
 

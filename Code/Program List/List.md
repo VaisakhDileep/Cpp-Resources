@@ -62,7 +62,7 @@ Program061: [This program helps to understand structures in C++.](../Program061/
 Program062:[oop] [This program helps to understand friends of a class in C++.](../Program062/main.cpp)<br>
 Program063: [This program helps to understand pointer to functions in C++.](../Program063/main.cpp)<br>
 Program064:[oop] [This program helps to understand pointer to data members in C++.](../Program064/main.cpp)<br>
-Program065:[oop] [This program helps to understand pointer to member functions in C++.](../Program065/main.cpp)<br>
+Program065:[oop] [This program helps to understand pointer to member methods in C++.](../Program065/main.cpp)<br>
 Program066:[oop] [This program helps to understand operator overloading in C++.](../Program066/main.cpp)<br>
 Program067:[oop] [This program helps to understand operator overloading using global functions in C++.](../Program067/main.cpp)<br>
 Program068:[oop] [This program helps to understand inheritance in C++.](../Program068/main.cpp)<br>
