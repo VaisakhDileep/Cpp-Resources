@@ -8,7 +8,7 @@ Description : This program helps to understand std::future and std::promise in C
 
 #include<thread>
 
-#include<future>
+#include<future> // Inlcude this header file for "std::promise" and "std::future".
 
 /*
 std::promise: It provides a facility to store a value or an exception that is later acquired asynchronously via a std::future object created by the std::promise object.
@@ -49,6 +49,7 @@ int main()
     future<unsigned long long> future_element {promise_element.get_future()};
 
     thread t1 {counter, std::ref(promise_element), 10'00'00'000};
+
     cout<<"*****start of t1***** \n";
 
     cout<<"future_element.get(): "<<future_element.get()<<"\n"; // Notice here that we get the result even before 't1' finishes executing.
