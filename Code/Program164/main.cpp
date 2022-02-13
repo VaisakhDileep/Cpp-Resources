@@ -28,6 +28,8 @@ void display_atan_range_0_to_2_pi();
 
 void display_atan2_range_0_to_2_pi();
 
+void display_atan2_output_range_0_to_2_pi();
+
 int main()
 {
 // sin(x): Returns the sine of the angle of 'x' radians.
@@ -61,6 +63,8 @@ int main()
 //           "atan2()" values range from -pi to +pi(since the range is upto '2*pi' we get the quadrant information).
 
     display_atan2_range_0_to_2_pi();
+
+    display_atan2_output_range_0_to_2_pi(); // Notice here we get the result in the range continuously from '0' to '2*pi'. // atan2(a, b) [in the range from -pi to +pi] = atan2(-a, -b) + pi [continuosly in the range from 0 to 2*pi].
 
     return 0;
 }
@@ -303,6 +307,53 @@ void display_atan2_range_0_to_2_pi()
     while(radians <= (2 * pi + (0.0001)))
     {
         cout<<"atan2("<<setw(12)<<left<<sin(radians)<<", "<<setw(12)<<left<<cos(radians)<<"): "<<atan2(sin(radians), cos(radians))<<"\n";
+
+        radians += interval;
+    }
+
+    cout<<"\n\n";
+}
+
+void display_atan2_output_range_0_to_2_pi()
+{
+    double interval {(2 * pi) / 12}; // '30 deg' interval.
+
+    double radians {0};
+
+    cout<<"atan2 values output ranged from 0 to 2*pi: \n";
+    cout<<"------------------------------------------ \n";
+
+    cout<<"First Quadrant: \n";
+    while(radians <= (pi / 2  + (0.0001))) // First Quadrant
+    {
+        cout<<"atan2("<<setw(12)<<left<<-sin(radians)<<", "<<setw(12)<<left<<-cos(radians)<<"): "<<(atan2(-sin(radians), -cos(radians)) + pi)<<"\n";
+
+        radians += interval;
+    }
+    cout<<"\n";
+
+    cout<<"Second Quadrant: \n";
+    while(radians <= (pi + (0.0001))) // Second Quadrant
+    {
+        cout<<"atan2("<<setw(12)<<left<<-sin(radians)<<", "<<setw(12)<<left<<-cos(radians)<<"): "<<(atan2(-sin(radians), -cos(radians)) + pi)<<"\n";
+
+        radians += interval;
+    }
+    cout<<"\n";
+
+    cout<<"Third Quadrant: \n";
+    while(radians <= ((static_cast<double>(3) / 2) * pi + (0.0001)))
+    {
+        cout<<"atan2("<<setw(12)<<left<<-sin(radians)<<", "<<setw(12)<<left<<-cos(radians)<<"): "<<(atan2(-sin(radians), -cos(radians)) + pi)<<"\n";
+
+        radians += interval;
+    }
+    cout<<"\n";
+
+    cout<<"Fourth Quadrant: \n";
+    while(radians <= (2 * pi + (0.0001)))
+    {
+        cout<<"atan2("<<setw(12)<<left<<-sin(radians)<<", "<<setw(12)<<left<<-cos(radians)<<"): "<<(atan2(-sin(radians), -cos(radians)) + pi)<<"\n";
 
         radians += interval;
     }
