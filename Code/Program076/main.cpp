@@ -95,7 +95,7 @@ Note: In order for virtual functions to work the function signature and return t
 
 /*
 The class hierarchy used is:
-    Account
+     Account
         ^
         |
    _____|_____
