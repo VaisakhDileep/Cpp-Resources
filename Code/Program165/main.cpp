@@ -33,7 +33,7 @@ void function(int x, int y) // In my os it is internally named as "_Z8functionii
 int main()
 {
 /*
-Inorder to view how "name mangling" actually works:
+In order to view how "name mangling" actually works:
 
 1. Compile the program using "g++ -c main.cpp main.o".
 2. Run "nm main.o".
