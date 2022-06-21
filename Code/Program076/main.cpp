@@ -32,7 +32,7 @@ public:
         cout<<"withdraw() called from Savings class.\n";
     }
 
-    virtual ~Savings() // Not neccesary only base destructor need to be virtual, the derived classes need not be declared virtual but it is good programming practice to do so.
+    virtual ~Savings() // Not necessary only base destructor need to be virtual, the derived classes need not be declared virtual but it is good programming practice to do so.
     {
         cout<<"Destructor called from Savings class.\n";
     }
@@ -82,7 +82,7 @@ Note: Virtual functions are virtual all the way down the hierarchy from the Base
 
 Note: Dynamic polymorphism only works with pointers and references.
 
-Syntax for delcaring virtual functions:
+Syntax for declaring virtual functions:
 class Base
 {
 public:

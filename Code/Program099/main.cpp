@@ -54,9 +54,8 @@ void function(int data1, int data2)
 
 int main()
 {
-// C++ template is a blueprint and it is compiled during compile-time and not run-time. Compiler generates the appropriate function / class from the blueprint. It is used to achieve Generic-programming / Meta-programming.
-    int num1 {10};
-    int num2 {2};
+// C++ template is a blueprint and it is compiled during compile-time and not run-time. Compiler generates the appropriate function/class from the blueprint. It is used to achieve Generic-programming/Meta-programming.
+    int num1 {10}, num2 {2};
 
     Person Homer {"Homer J Simpson", 39}; // This kind of initialization is possible in struct.
     Person Burns {"Montgomery Burns", 81};
@@ -83,11 +82,11 @@ int main()
     function('a', 'b');
     cout<<"\n";
 
-    cout<<"function(1, 'a'): "; // Here the compiler will type cast one of the parameter so as to call the non-template version.
+    cout<<"function(1, 'a'): "; // Here the template version is called.
     function(1, 'a');
     cout<<"\n";
 
-    cout<<"function('a', 1): "; // Here the compiler will type cast one of the parameter so as to call the non-template version.
+    cout<<"function('a', 1): "; // Here the template version is called.
     function('a', 1);
     cout<<"\n";
 

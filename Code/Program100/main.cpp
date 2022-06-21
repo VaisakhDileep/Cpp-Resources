@@ -93,7 +93,7 @@ public:
 
     T &operator[](int index) // Overloading the [] operator.
     {
-        return values[index]; // Here we are returning by reference because suppose we have "1_D_Array[4] = 1", then by precedence the overloaded '[]' is evaluated first, which translates to "1_D_Array.values[4] = 1" and then the '=' opearator is evaluated, here if it was returning a copy then it will not work as we are assigning to a copy and not to the original one.
+        return values[index]; // Here we are returning by reference because suppose we have "1_D_Array[4] = 1", then by precedence the overloaded '[]' is evaluated first, which translates to "1_D_Array.values[4] = 1" and then the '=' operator is evaluated, here if it was returning a copy then it will not work as we are assigning to a copy and not to the original one.
     }
 };
 

@@ -179,3 +179,4 @@ Program162:[thread] [This program helps to understand std::future and std::promi
 Program163:[thread] [This program helps to understand std::async() in C++.](../Program163/main.cpp)<br>
 
 # Design Pattern
+Program166:[design pattern] [This program helps to understand curiously recurring template pattern(CRTP) in C++.](../Program166/main.cpp)<br>
