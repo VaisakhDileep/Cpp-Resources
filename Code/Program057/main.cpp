@@ -8,9 +8,14 @@ Description : This program helps to understand the difference between l-value re
 
 using namespace std;
 
-void printReferenceValue(int &);
+void printReferenceValue_1(int &);
 
-void printReferenceValue(int &&);
+void printReferenceValue_2(int &&);
+
+void printReferenceValue_3(int &);
+void printReferenceValue_3(int &&);
+
+void printReferenceValue_4(const int &);
 
 int main()
 {
@@ -43,19 +48,50 @@ Uses of r-value reference:
 1. They are used when working with move constructor and move assignment.
 */
 
-    printReferenceValue(dummy);
+    printReferenceValue_1(dummy);
+    // printReferenceValue_1(999); // This will give an error since "printReferenceValue_1" only handles l-value reference.
+    cout<<"\n";
 
-    printReferenceValue(999);
+    // printReferenceValue_2(dummy); // This will give an error since "printReferenceValue_2" only handles r-value reference.
+    printReferenceValue_2(999);
+    cout<<"\n";
+
+    printReferenceValue_3(dummy);
+    printReferenceValue_3(999); // This works but over here we used function overloading.
+    cout<<"\n";
+
+    printReferenceValue_4(dummy);
+    printReferenceValue_4(999); // We achieved the same result as above without using function overloading.
 
     return 0;
 }
 
-void printReferenceValue(int &value)
+void printReferenceValue_1(int &value)
 {
-    cout<<"Value[l-value-reference]: "<<value<<"\n";
+    cout<<"Inside printReferenceValue_1 -> ";
+    cout<<"Value: "<<value<<"\n";
 }
 
-void printReferenceValue(int &&value)
+void printReferenceValue_2(int &&value)
 {
-    cout<<"Value[r-value-reference]: "<<value<<"\n";
+    cout<<"Inside printReferenceValue_2 -> ";
+    cout<<"Value: "<<value<<"\n";
+}
+
+void printReferenceValue_3(int &value)
+{
+    cout<<"Inside printReferenceValue_3 -> ";
+    cout<<"Value: "<<value<<"\n";
+}
+
+void printReferenceValue_3(int &&value)
+{
+    cout<<"Inside printReferenceValue_3 -> ";
+    cout<<"Value: "<<value<<"\n";
+}
+
+void printReferenceValue_4(const int &value) // This will catch both l-value reference and r-value reference. Using "const int &" will extend the life-time of stack base temporary(r-value) references.
+{
+    cout<<"Inside printReferenceValue_4 -> ";
+    cout<<"Value: "<<value<<"\n";
 }

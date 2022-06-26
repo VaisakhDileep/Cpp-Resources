@@ -125,6 +125,7 @@ Program079:[oop] [This program helps to understand abstract classes in C++.](../
 Program080:[oop] [This program helps to understand interfaces in C++.](../Program080/main.cpp)<br>
 Program100:[oop] [This program helps to understand generic programming using Class Templates in C++.](../Program100/main.cpp)<br>
 Program102:[oop] [This program helps to understand functors(function objects) in C++.](../Program102/main.cpp)<br>
+Program167:[oop] [This program helps to understand explicit keyword in C++.](../Program167/main.cpp)<br>
 
 # Standard Template Library
 
