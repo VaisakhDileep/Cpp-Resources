@@ -58,7 +58,9 @@ int main()
 
     cout<<"Full Name: "<<first_name + last_name<<"\n"; // Here we can use concatenation operation between C++ strings.
 
-    cout<<"Full Name: "<<first_name + " " + last_name<<"\n\n"; // Here we can use concatenation operation between C++ string and C-style string literals.
+    cout<<"Full Name: "<<first_name + " " + last_name<<"\n"; // Here we can use concatenation operation between C++ string and C-style string literals.
+
+    cout<<"Full Name: "<<first_name + ' ' + last_name<<"\n\n"; // Here we can use concatenation operation between C++ string and a character literal.
 
     // cout<<"Full Name : "<< "Montgomery" + " " + "Burns"<<"\n"; // Here we can't use concatenation operation because all the strings here are C-style literals.
 

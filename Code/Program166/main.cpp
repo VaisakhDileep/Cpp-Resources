@@ -27,7 +27,7 @@ template<typename T>
 class Base
 {
 public:
-    void print() // Notice here we are not performing dynamic polymorphism, therefore function names need to match.
+    void print() // Notice here we are not performing dynamic polymorphism, therefore function names need not match.
     {
         static_cast<T*>(this)->print_state();
     }
@@ -72,12 +72,21 @@ int main()
     State_2 state_2_object;
     State_3 state_3_object;
 
+    state_1_object.print_state();
+    cout<<"\n";
+    state_2_object.print_state();
+    cout<<"\n";
+    state_3_object.print_state();
+    cout<<"\n\n";
+
     print_state(state_1_object);
     // print_state<State_1>(state_1_object); // This is also valid.
     cout<<"\n";
+
     print_state(state_2_object);
     // print_state<State_2>(state_2_object); // This is also valid.
     cout<<"\n";
+
     print_state(state_3_object);
     // print_state<stat>
 

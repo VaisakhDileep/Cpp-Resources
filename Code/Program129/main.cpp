@@ -30,7 +30,7 @@ int lucky_number_1; // "lucky_number_1" will be defined in "greetings_prototype_
 
 const int lucky_number_2 {78}; // "constant" variables wont't be defined elsewhere, so linker is OK with it.
 
-void greet_me(string name) // "greet_me(string name)" will be defined in "greetings_prototype_1.cpp" and "main.cpp". Linker will reprot an error.
+void greet_me(string name) // "greet_me(string name)" will be defined in "greetings_prototype_1.cpp" and "main.cpp". Linker will report an error.
 {
     cout<<"Hello, "<<name<<"!!\n";
 }

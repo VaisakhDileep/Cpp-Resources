@@ -181,3 +181,4 @@ Program163:[thread] [This program helps to understand std::async() in C++.](../P
 
 # Design Pattern
 Program166:[design pattern] [This program helps to understand curiously recurring template pattern(CRTP) in C++.](../Program166/main.cpp)<br>
+Program168:[design pattern] [This program helps to understand single responsibility principle in C++.](../Program168/main.cpp)<br>
