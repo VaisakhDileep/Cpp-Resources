@@ -1,4 +1,4 @@
-# C++ Fundaments:
+# C++ Fundamentals:
 
 Program001: [This program prints "Hello, World!" and demonstrates some of the errors occurred in C++.](../Program001/main.cpp)<br>
 Program002: [This program helps to understand the structure of a C++ program.](../Program002/main.cpp)<br>
@@ -10,7 +10,8 @@ Program007: [This program helps to understand vectors in C++.](../Program007/mai
 Program008: [This program helps to understand expressions, statements and operators in C++.](../Program008/main.cpp)<br>
 Program009: [This program helps to understand if statements in C++.](../Program009/main.cpp)<br>
 Program010: [This program helps to understand switch statements in C++.](../Program010/main.cpp)<br>
-Program011: [This program helps to understand enumerations in C++.](../Program011/main.cpp)<br>
+Program011: [This program helps to understand enumerations(enum) in C++.](../Program011/main.cpp)<br>
+Program170: [This program helps to understand enum class in C++](../Program170/main.cpp)<br>
 Program012: [This program helps to understand conditional operator(?:) in C++.](../Program012/main.cpp)<br>
 Program013: [This program helps to understand for loops in C++.](../Program013/main.cpp)<br>
 Program014: [This program helps to understand while loops in C++.](../Program014/main.cpp)<br>
@@ -182,3 +183,4 @@ Program163:[thread] [This program helps to understand std::async() in C++.](../P
 # Design Pattern
 Program166:[design pattern] [This program helps to understand curiously recurring template pattern(CRTP) in C++.](../Program166/main.cpp)<br>
 Program168:[design pattern] [This program helps to understand single responsibility principle in C++.](../Program168/main.cpp)<br>
+Program169:[design pattern] [This program helps to understand open-closed principle in C++.](../Program169/main.cpp)<br>
