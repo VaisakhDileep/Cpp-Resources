@@ -10,6 +10,8 @@ Description : This program helps to understand virtual functions in C++.
 
 using namespace std;
 
+// Note: Virtual functions are used 
+
 class Account
 {
 public:
@@ -76,11 +78,12 @@ void display(Account &account) // This will work because derived "Is-A" base cla
 int main()
 {
 /*
-Virtual functions are bound dynamically. Virtual functions are overriden, they allow us to treat all objects generally as objects of Base class(abstraction).
+Virtual functions are bound dynamically(Dynamic Polymorphism). Virtual functions are overriden, they allow us to treat all objects generally as objects of Base class(abstraction).
 
 Note: Virtual functions are virtual all the way down the hierarchy from the Base point(so don't need to include virtual keyword for the classes below the Base class)
-
 Note: Dynamic polymorphism only works with pointers and references.
+Note: Virtual functions cannot be global or static, since virtual function relies on object to determine which implementation to choose.
+
 
 Syntax for declaring virtual functions:
 class Base
@@ -95,15 +98,15 @@ Note: In order for virtual functions to work the function signature and return t
 
 /*
 The class hierarchy used is:
-     Account
-        ^
-        |
-   _____|_____
-   |         |
-Savings   Checking
-^
-|
-Trust
+       Account
+          ^
+          |
+     _____|_____
+     |         |
+  Savings   Checking
+     ^
+     |
+   Trust
 */
 
 /*
@@ -120,7 +123,7 @@ Note: If you have virtual functions, then make sure to use virtual destructors a
 
     vector<Account*> account_vector = {account_1, account_2, account_3, account_4};
 
-    for(auto account_pointer : account_vector) // See this helps us achevie abstraction, we just have to create a base class object and store them in a vector, it is handled differently with the help of virtual functions.
+    for(auto account_pointer : account_vector) // See this helps us achieve abstraction, we just have to create a base class object and store them in a vector, it is handled differently with the help of virtual functions.
     {
         account_pointer->withdraw(100);
 

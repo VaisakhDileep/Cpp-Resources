@@ -13,6 +13,8 @@ int main()
 // Enumeration is a user-defined data type that is used to assign names to integer constants. It makes the program easy to read and maintain.
 
     enum season {spring, summer, autumn, winter}; // By default spring = 0, summer = 1, autumn = 2, winter = 3.
+
+    // int spring = 1; // This will give an error we cannot redeclare any enumerated integer constants.
 // Here season is just a blueprint.
 
     season s {}; // Here "s" is a variable of enumerated type.
@@ -20,7 +22,7 @@ int main()
     s = spring;
     cout<<"s{spring}: "<<s<<"\n";
 
-    s = summer;
+    s = season::summer; // This is also valid.
     cout<<"s{summer}: "<<s<<"\n";
 
     s = autumn;

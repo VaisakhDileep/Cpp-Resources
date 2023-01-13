@@ -17,6 +17,8 @@ typedef struct car
 
 typedef ford mustang; // We could also use typedef like this for the "car" struct.
 
+using ford_mustang = car; // We can now use "using" instead of "typedef" since c++11.
+
 int main()
 {
 /*
@@ -26,9 +28,9 @@ Syntax for typedef:
     typedef data_type new_data_type;
 */
     {
-        typedef int bananna;
+        typedef int banana;
 
-        bananna b {10}; // We can create an int object using "bananna".
+        banana b {10}; // We can create an int object using "banana".
 
         int i {20}; // We can still use "int".
 
@@ -47,6 +49,10 @@ Syntax for typedef:
     mustang mustang_2019 {"mustang shelby GT500", "2019"};
 
     cout<<mustang_2019.car_model<<" "<<mustang_2019.year<<"\n";
+
+    ford_mustang mustang_1999 {"mustang GT", "1999"};
+
+    cout<<mustang_1999.car_model<<" "<<mustang_1999.year<<"\n";
 /*
 typedef vs #define:
 1. typedef can only provide alternative names to data types, it cannot do the same with values whereas #define can provide alternative names to values as well.
