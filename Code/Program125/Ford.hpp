@@ -2,15 +2,14 @@
 
 using namespace std;
 
-class Ford
-{
+class Ford {
 public:
     string model_name;
     int year_of_release {};
 
     Ford(); // Constructor
 
-    ~Ford(); // Descructor
+    ~Ford(); // Destructor
 
     void set_model_name(string model_name); // Setters
     void set_year_of_release(int year_of_release);

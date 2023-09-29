@@ -49,7 +49,7 @@ Player::Player(string player_name, int player_health, int player_xp)
 Player::Player(const Player &source)
     :Player {source.name, source.health, source.xp} // Delegating constructor
 {
-    // Here we haven't used "++player_count" because we deligate to the 3-args constructor, where there is "++player_count".
+    // Here we haven't used "++player_count" because we delegate to the 3-args constructor, where there is "++player_count".
 }
 
 Player::~Player()
@@ -99,7 +99,7 @@ int main()
 /*
 Static data members: This data member belongs to the class and not the object. It is used to store class-wide information. It can be accessed using the class name.
 
-Static class functions: This function can only access static data members. They are independent of any objects. The can be called by using the class name.
+Static class functions: This function can only access static data members. They are independent of any objects. They can be called by using the class name.
 */
     display_active_player_objects();
 

@@ -65,6 +65,8 @@ Program095: [This program helps to understand how to copy and paste the contents
 Program096: [This program helps to understand string streams in C++.](../Program096/main.cpp)<br>
 Program098: [This program helps to understand generic programming using Macros in C++.](../Program098/main.cpp)<br>
 Program099: [This program helps to understand generic programming using Function Templates in C++.](../Program099/main.cpp)<br>
+Program172: [This program helps to understand how to declare static variables inside template functions in C++.](../Program172/main.cpp)<br>
+Program173: [This program helps to understand how to declare static data-members inside template classes in C++.](../Program173/main.cpp)<br>
 Program104: [This program helps to differentiate between global namespace and named namespace in C++.](../Program104/main.cpp)<br>
 Program118: [This program helps to understand how to pass a variable number of arguments to a function in C++.](../Program118/main.cpp)<br>
 Program171: [This program helps to understand parameter pack in C++.](../Program171/main.cpp)<br>
@@ -72,7 +74,7 @@ Program119: [This program helps to understand unions in C++.](../Program119/main
 Program122: [This program helps to understand the goto statement in C++.](../Program122/main.cpp)<br>
 Program123: [This program helps to understand how to declare positive infinity and negative infinity in C++.](../Program123/main.cpp)<br>
 Program124: [This program helps to understand header guards in C++.](../Program124/main.cpp)<br>
-Program125: [This program helps to understand make files in C++.](../Program125/main.cpp)<br>
+Program125: [This program helps to understand makefile in C++.](../Program125/main.cpp)<br>
 Program127: [This program helps to understand lambda expressions in C++.](../Program127/main.cpp)<br>
 Program128: [This program helps to understand typedef in C++.](../Program128/main.cpp)<br>
 Program129: [This program helps to understand the duplicate definition problem when working with header files in C++.](../Program129/main.cpp)<br>

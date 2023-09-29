@@ -38,7 +38,7 @@ int main()
 
     // int constexpr number_5; // Notice here we can't use uninitialized constexpr variables.
 
-    // number_3 = 50; // We can't change the value of "number_3" since it is a constexpr varaiable.
+    // number_3 = 50; // We can't change the value of "number_3" since it is a constexpr variable.
 
     int result {};
 

@@ -10,8 +10,6 @@ Description : This program helps to understand virtual functions in C++.
 
 using namespace std;
 
-// Note: Virtual functions are used 
-
 class Account
 {
 public:
@@ -65,6 +63,82 @@ public:
     virtual ~Trust()
     {
         cout<<"Destructor called from Trust class.\n";
+    }
+};
+
+class Printer_A
+{
+public:
+    void print()
+    {
+        cout<<"Printer A says \"hi!\"\n";
+    }
+};
+
+class Printer_B: public Printer_A
+{
+public:
+    virtual void print()
+    {
+        cout<<"Printer B says \"hi!\"\n";
+    }
+};
+
+class Printer_C: public Printer_B
+{
+public:
+    void print()
+    {
+        cout<<"Printer C says \"hi!\"\n";
+    }
+};
+
+class Game
+{
+public:
+    virtual void which_class()
+    {
+        cout<<"Game class\n";
+    }
+
+    virtual void target_audience()
+    {
+        cout<<"Audience -> Incomplete without game category !!!\n";
+    }
+};
+
+class Horror: public Game
+{
+    string player_perspective {};
+
+public:
+    virtual void which_class()
+    {
+        cout<<"Horror class\n";
+    }
+
+    virtual void target_audience()
+    {
+        cout<<"Audience -> Above 15 yrs ...\n";
+    }
+
+    virtual void set_character_perspective(string plyr_prsp)
+    {
+        player_perspective = plyr_prsp;
+    }
+
+    virtual string get_character_perspective()
+    {
+        return player_perspective;
+    }
+};
+
+class Survival_Horror: public Horror
+{
+public:
+    virtual void which_class()
+    {
+        cout<<"Survival Horror class\n";
     }
 };
 
@@ -172,6 +246,35 @@ Note: If you have virtual functions, then make sure to use virtual destructors a
 
     account_12.withdraw(200);
     cout<<"\n";
+
+    // Printer_B *printer_obj_1 {new Printer_A {}}; // This will give an error, since "Printer_A" is base class for "Printer_B".
+    Printer_B *printer_obj_2 {new Printer_B {}};
+    Printer_B *printer_obj_3 {new Printer_C {}};
+
+    printer_obj_2->print();
+    printer_obj_3->print();
+    cout<<"\n";
+
+    Printer_A *printer_obj_4 {new Printer_A {}};
+    Printer_A *printer_obj_5 {new Printer_B {}};
+    Printer_A *printer_obj_6 {new Printer_C {}};
+
+    printer_obj_4->print();
+    printer_obj_5->print();
+    printer_obj_6->print(); // Notice over here we did not achieve dynamic polymorphism, this is because "Printer_A" does not have "print()" as virtual.
+    cout<<"\n";
+
+    Game *game_1 {new Game {}};
+    Game *game_2 {new Horror {}};
+    Game *game_3 {new Survival_Horror {}};
+
+    game_1->target_audience();
+    game_2->target_audience();
+    game_3->target_audience(); // Here "Survival_Horror" class does not override "target_audience()", therefore it uses "target_audience()" from "Horror" class.
+                               // Note it is not bound to the base class's implementation of "target_audience()", it is bound to "Horror" class's implementation of "target_audience()".
+    cout<<"\n";
+
+    // game_1->set_character_perspective("First-Person"); // This will given an error, since "set_character_perspective" method is not present in the base class. For run-time polymorphism to successfully bind to the correct method it should be present in the member method of the base class as a virtual function.
 
     return 0;
 }

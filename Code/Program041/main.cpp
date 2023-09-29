@@ -31,17 +31,17 @@ int main()
 
     int &ref_1 {number};
 
-    cout<<"Number             : "<<number<<"\n";
+    cout<<"number             : "<<number<<"\n";
     cout<<"Reference to number: "<<ref_1<<"\n\n";
 
     number = 200;
 
-    cout<<"Number             : "<<number<<"\n";
+    cout<<"number             : "<<number<<"\n";
     cout<<"Reference to number: "<<ref_1<<"\n\n";
 
     ref_1 = 300;
 
-    cout<<"Number             : "<<number<<"\n";
+    cout<<"number             : "<<number<<"\n";
     cout<<"Reference to number: "<<ref_1<<"\n\n";
 
     vector<string> simpson_family = {"Homer Simpson", "Lisa Simpson", "Bart Simpson", "Maggie Simpson", "Marge Bouvier"};
@@ -77,6 +77,18 @@ int main()
     const int &ref_3 {10}; // This is possible only for const l-value references.
 
     const_ref_class ref_object {10}; // Object containing a const l-value reference.
+
+    const int &ref_4 {number};
+
+    cout<<"number                      : "<<number<<"\n";
+    cout<<"constant reference to number: "<<ref_4<<"\n\n";
+
+    // ref_4 = 500; // This will give an error since it is a constant reference.
+
+    number = 500; // This is Ok.
+
+    cout<<"number                      : "<<number<<"\n";
+    cout<<"constant reference to number: "<<ref_4<<"\n";
 
     return 0;
 }
