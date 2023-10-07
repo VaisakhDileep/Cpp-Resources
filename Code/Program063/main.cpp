@@ -8,18 +8,15 @@ Description : This program helps to understand pointer to functions in C++.
 
 using namespace std;
 
-void test()
-{
-    cout<<"Inside the test function .... \n";
+void test() {
+    cout << "Inside the test function .... \n";
 }
 
-void function1()
-{
-    cout<<"Inside Function 1 ... \n";
+void function1() {
+    cout << "Inside Function 1 ... \n";
 }
 
-void function2(void(*function_ptr)())
-{
+void function2(void(*function_ptr)()) {
     function_ptr();
 }
 
@@ -27,19 +24,17 @@ int add(int, int);
 
 void swap(int*, int*);
 
-int main()
-{
+int main() {
 // Function pointers: Function pointers are used to point to functions. It basically stores the address of the function. They are mainly used for event-driven applications, callbacks, and even for storing functions in arrays.
 
 /*
 Syntax for declaring function pointers:
-    Return_Type(*FuncPtr)(Parameter_1_Type, Parameter_2_Type); // --> This function pointers can point to any function that takes two parameters(of type "Parameter_1_Type" and "Parameter_2_Type") and returns a value(of type "Return_Type").
+    return_type (*func_ptr) (parameter_1_type, parameter_2_type); // This function pointers can point to any function that takes two parameters(of type "parameter_1_type" and "parameter_2_type") and returns a value(of type "return_type").
 */
 
-    printf("Address of the main(): %p\n", main); // Function name corresponds to the memory address of the function. Inorder to get the result we need to use the "printf()" function.
+    printf("Address of the main(): %p\n", main); // Function name corresponds to the memory address of the function. In order to get the result we need to use the "printf()" function.
     printf("Address of the main(): %#x\n", main); // The above result is same as this, so the result is in hexadecimal format.
     printf("Address of the main(): %p\n\n", &main); // We could also use the &(address of) operator before the function name.
-
     printf("Address of test(): %#x\n\n", test);
 
     int(*fun_add_ptr)(int, int); // Declaring the function pointer.
@@ -47,12 +42,11 @@ Syntax for declaring function pointers:
     fun_add_ptr = add; // "fun_add_ptr" is pointing to the "add" function.
 
     printf("Address of add(): %#x\n\n", add);
-
     printf("Address stored in fun_add_ptr: %#x\n\n", fun_add_ptr);
 
     int sum = fun_add_ptr(3, 2);
 
-    cout<<"sum: "<<sum<<"\n\n";
+    cout << "sum: " << sum << "\n\n";
 
     void(*fun_swap_ptr)(int*, int*); // Declaring the function pointer.
 
@@ -60,23 +54,18 @@ Syntax for declaring function pointers:
 
     int x {10}, y {20};
 
-    cout<<"x: "<<x<<"\ty: "<<y<<"\n";
-
+    cout << "x: " << x << "\ty: " << y << "\n";
     fun_swap_ptr(&x, &y);
-
-    cout<<"x: "<<x<<"\ty: "<<y<<"\n\n";
+    cout << "x: " << x << "\ty: " << y << "\n\n";
 
 /*
 Passing functions as arguments: We can pass function as arguments using function pointers.
-    Return_Type fun1(Return_Type(*FuncPtr)())
-    {
+    return_type fun(return_type(*func_ptr)()) {
         // ...
     }
 
-    int main()
-    {
-        func1(function_name);
-
+    int main() {
+        func(function_name);
         // ...
     }
 */
@@ -85,13 +74,11 @@ Passing functions as arguments: We can pass function as arguments using function
     return 0;
 }
 
-int add(int num1, int num2)
-{
+int add(int num1, int num2) {
     return num1 + num2;
 }
 
-void swap(int *num1, int *num2)
-{
+void swap(int *num1, int *num2) {
     int temp {*num1};
 
     *num1 = *num2;

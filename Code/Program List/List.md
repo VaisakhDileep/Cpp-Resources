@@ -80,6 +80,7 @@ Program128: [This program helps to understand typedef in C++.](../Program128/mai
 Program129: [This program helps to understand the duplicate definition problem when working with header files in C++.](../Program129/main.cpp)<br>
 Program130: [This program helps to understand the extern keyword in C++.](../Program130/main.cpp)<br>
 Program137: [This program helps to understand reinterpret_cast in C++.](../Program137/main.cpp)<br>
+Program175: [This program helps to understand dynamic_cast in C++.](../Program175/main.cpp)<br>
 Program138: [This program helps to understand padding in structures in C++.](../Program138/main.cpp)<br>
 Program142: [This program helps to understand std::ratio in C++.](../Program142/main.cpp)<br>
 Program143: [This program helps to understand the ctime library in C++.](../Program143/main.cpp)<br>
@@ -187,3 +188,4 @@ Program163:[thread] [This program helps to understand std::async() in C++.](../P
 Program166:[design pattern] [This program helps to understand curiously recurring template pattern(CRTP) in C++.](../Program166/main.cpp)<br>
 Program168:[design pattern] [This program helps to understand single responsibility principle in C++.](../Program168/main.cpp)<br>
 Program169:[design pattern] [This program helps to understand open-closed principle in C++.](../Program169/main.cpp)<br>
+Program174:[design pattern] [This program helps to understand Liskov substitution principle in C++.](../Program174/main.cpp)<br>

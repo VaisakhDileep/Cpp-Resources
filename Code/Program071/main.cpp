@@ -8,68 +8,52 @@ Description : This program helps to understand how to pass arguments to Base cla
 
 using namespace std;
 
-class Base
-{
+class Base {
 private:
     int value;
 public:
-    Base()
-        : value {0}
-    {
-        cout<<"No-args constructor called for Base class.\n";
+    Base(): value {0} {
+        cout << "No-args constructor called for Base class.\n";
     }
 
-    Base(int value)
-        : value {value}
-    {
-        cout<<"Overloaded{int} constructor called for Base class.\n";
+    Base(int value): value {value} {
+        cout << "Overloaded{int} constructor called for Base class.\n";
     }
 };
 
-class Derived: public Base
-{
+class Derived: public Base {
 private:
     int double_value;
 public:
-    Derived()
-        : Base {}, double_value {}
-    {
-        cout<<"No-args constructor called for Derived class.\n";
+    Derived(): Base {}, double_value {} {
+        cout << "No-args constructor called for Derived class.\n";
     }
 
-    Derived(int value)
-        : Base {value}, double_value {value * 2}
-    {
-        cout<<"Overloaded{int} constructor called for Derived class.\n";
+    Derived(int value): Base {value}, double_value {value * 2} {
+        cout << "Overloaded{int} constructor called for Derived class.\n";
     }
 };
 
-int main()
-{
-
+int main() {
 /*
-Syntax for passing arguments to base class constructors:
-class Base
-{
+Syntax for passing arguments to base class constructors from derived class:
+class Base {
 public:
     Base(int);
 };
 
-Derived::Derived(int x)
-    :Base(x), {optional initializers for Derived}
-{
+Derived::Derived(int x): Base(x), {optional initializers for Derived} {
     // Code
 }
 */
     Base base_zero {}; // No-args constructor called
-    cout<<"\n";
+    cout << "\n";
     Base base_ten {10}; // Overloaded{int} constructor called
-    cout<<"\n";
+    cout << "\n";
 
     Derived derived_zero {}; // No-args constructor called
-    cout<<"\n";
+    cout << "\n";
     Derived derived_ten {10}; // Overloaded{int} constructor called
-    cout<<"\n";
 
     return 0;
 }

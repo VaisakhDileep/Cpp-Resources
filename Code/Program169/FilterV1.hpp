@@ -43,7 +43,6 @@ public:
         }
         return result;
     }
-
 /*
 Suppose if we want to add a filter for TRANSPORTATION. We need to add 4 new functions which are:
 1. filter_by_transportation()
