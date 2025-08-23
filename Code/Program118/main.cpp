@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 18, May, 2021
-Description : This program helps to understand how to pass a variable number of arguments to a function in C++.
+Description : Pass variable number of arguments to a function.
 */
 
 #include<iostream>

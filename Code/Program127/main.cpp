@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 17, September, 2021
-Description : This program helps to understand lambda expressions in C++.
+Description : Lambda expression.
 */
 
 #include<iostream>

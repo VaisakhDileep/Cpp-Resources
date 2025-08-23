@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, January, 2021
-Description : This program helps to understand how to throw an exception from a function in C++.
+Description : Throw an exception from a function.
 */
 
 #include<iostream>

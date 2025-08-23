@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 8, September, 2021
-Description : This program helps to understand makefile in C++.
+Description : Makefile.
 */
 
 #include<iostream>

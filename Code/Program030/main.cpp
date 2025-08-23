@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 23, December, 2020
-Description : Pass by Reference in user-defined function.
+Description : Pass by reference in user-defined function.
 */
 
 #include<iostream>

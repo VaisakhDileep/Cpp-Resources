@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 4, February, 2021
-Description : This program helps to understand string streams in C++.
+Description : String stream.
 */
 
 #include<iostream>

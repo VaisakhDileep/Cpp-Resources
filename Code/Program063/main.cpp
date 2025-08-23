@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 7, January, 2021
-Description : This program helps to understand pointer to functions in C++.
+Description : Pointer to a function.
 */
 
 #include<iostream>

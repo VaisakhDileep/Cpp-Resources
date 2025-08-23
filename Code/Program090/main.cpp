@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 27, January, 2021
-Description : This program helps to understand class level exception handling in C++.
+Description : Class level exception handling.
 */
 
 #include<iostream>

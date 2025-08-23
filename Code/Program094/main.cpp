@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 1, February, 2021
-Description : This program helps to understand how to write to a text file in C++.
+Description : Write to a text file.
 */
 
 #include<iostream>

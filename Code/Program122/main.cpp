@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 29, July, 2021
-Description : This program helps to understand the goto statement in C++.
+Description : Goto statement.
 */
 
 #include<iostream>

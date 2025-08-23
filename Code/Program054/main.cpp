@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 1, January, 2021
-Description : This program checks if the freed dynamically allocated memory can be accessed after the delete operation in C++.
+Description : Experiment if freed dynamically allocated memory can be accessed after the delete operation.
 */
 
 // This program might crash in some os.

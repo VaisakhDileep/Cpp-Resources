@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, December, 2020
-Description : This program helps to understand references in C++.
+Description : Reference.
 */
 
 #include<iostream>

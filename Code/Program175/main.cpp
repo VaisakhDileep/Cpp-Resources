@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 6, October, 2023
-Description : This program helps to understand dynamic_cast in C++.
+Description : Dynamic_cast.
 */
 
 #include<iostream>

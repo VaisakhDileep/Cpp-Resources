@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 5, February, 2021
-Description : This program helps to understand generic programming using Macros in C++.
+Description : Generic programming using macro.
 */
 
 #include<iostream>

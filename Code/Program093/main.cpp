@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 31, January, 2021
-Description : This program helps to understand how to read a text file in C++.
+Description : Read a text file.
 */
 
 #include<iostream>

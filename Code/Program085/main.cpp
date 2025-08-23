@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, January, 2021
-Description : This program helps to understand exception handling in C++.
+Description : Exception handling.
 */
 
 #include<iostream>

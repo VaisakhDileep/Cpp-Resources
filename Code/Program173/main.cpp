@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 12, February, 2023
-Description : This program helps to understand how to declare static data-members inside template classes in C++.
+Description : Declare static data-members inside template class.
 */
 
 #include<iostream>

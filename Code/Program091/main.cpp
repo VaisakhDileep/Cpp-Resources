@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 27, January, 2021
-Description : This program helps to understand std::exception class hierarchy in C++.
+Description : std::exception class hierarchy.
 */
 
 #include<iostream>

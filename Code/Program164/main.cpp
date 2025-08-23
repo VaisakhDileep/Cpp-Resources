@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 9, February, 2022
-Description : This program helps to understand the different trigonometric functions in C++.
+Description : Trigonometric functions.
 */
 
 #include<iostream>

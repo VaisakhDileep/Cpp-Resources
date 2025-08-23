@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 1, February, 2021
-Description : This program helps to understand how to copy and paste the contents of a file in C++.
+Description : Copy and paste the contents of a file.
 */
 
 #include<iostream>

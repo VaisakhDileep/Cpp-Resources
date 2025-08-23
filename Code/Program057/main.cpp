@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 2, January, 2021
-Description : This program helps to understand the difference between l-value reference and r-value reference in C++.
+Description : Difference between l-value reference and r-value reference.
 */
 
 #include<iostream>

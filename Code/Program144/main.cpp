@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 16, November, 2021
-Description : This program helps to understand regex_match() in C++.
+Description : Regex_match.
 */
 
 #include<iostream>

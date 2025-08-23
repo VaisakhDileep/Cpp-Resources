@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 19, December, 2020
-Description : Break and Continue statement.
+Description : Break and continue statement.
 */
 
 #include<iostream>

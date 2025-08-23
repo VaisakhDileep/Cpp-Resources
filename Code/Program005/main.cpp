@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 15, December, 2020
-Description : Variables and Constants.
+Description : Variables and constants.
 */
 
 #include<iostream>

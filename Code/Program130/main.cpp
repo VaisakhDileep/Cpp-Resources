@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 4, October, 2021
-Description : This program helps to understand the extern keyword in C++.
+Description : Extern.
 */
 
 #include<iostream>

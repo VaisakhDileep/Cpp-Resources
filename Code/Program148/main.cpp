@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 1, December, 2021
-Description : This program helps to understand '%n' special format specifier in printf() in C++.
+Description : '%n' special format specifier in printf.
 */
 
 #include<iostream>

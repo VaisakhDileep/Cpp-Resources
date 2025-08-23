@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 3, October, 2021
-Description : This program helps to understand the duplicate definition problem when working with header files in C++.
+Description : Duplicate definition problem when working with header files.
 */
 
 #include<iostream>

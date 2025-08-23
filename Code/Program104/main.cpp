@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 8, February, 2021
-Description : This program helps to differentiate between global namespace and named namespace in C++.
+Description : Global namespace and named namespace.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 3, January, 2021
-Description : This program helps to understand structures in C++.
+Description : Structure.
 */
 
 #include<iostream>

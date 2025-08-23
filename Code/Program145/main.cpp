@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 20, November, 2021
-Description : This program helps to understand regex_search() in C++.
+Description : Regex_search.
 */
 
 #include<iostream>

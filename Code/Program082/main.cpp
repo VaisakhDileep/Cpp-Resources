@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 24, January, 2021
-Description : This program helps to understand shared_ptr(smart_pointer) in C++.
+Description : Shared_ptr.
 */
 
 #include<iostream>

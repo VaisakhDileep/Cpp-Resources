@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, December, 2020
-Description : This program helps to understand constant pointers, pointers to constants and constant pointers to constants in C++.
+Description : Constant pointer, pointer to constant and constant pointer to constant.
 */
 
 #include<iostream>

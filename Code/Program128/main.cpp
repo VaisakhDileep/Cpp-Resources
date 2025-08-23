@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 18, September, 2021
-Description : This program helps to understand typedef in C++.
+Description : Typedef.
 */
 
 #include<iostream>

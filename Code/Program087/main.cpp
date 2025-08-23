@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, January, 2021
-Description : This program helps to understand how to handle multiple exceptions in C++.
+Description : Handle multiple exceptions.
 */
 
 #include<iostream>

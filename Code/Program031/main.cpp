@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 23, December, 2020
-Description : This program helps to understand scope rules in C++.
+Description : Scope rules.
 */
 
 #include<iostream>

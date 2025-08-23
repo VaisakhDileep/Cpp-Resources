@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, December, 2020
-Description : This program helps to understand pointer arithmetics in C++.
+Description : Pointer arithmetics.
 */
 
 #include<iostream>

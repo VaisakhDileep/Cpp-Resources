@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 19, January, 2021
-Description : This program helps to understand constexpr in C++.
+Description : Constexpr.
 */
 
 #include<iostream>

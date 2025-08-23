@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 21, January, 2023
-Description : This program helps to understand parameter pack in C++.
+Description : Parameter pack.
 */
 
 #include<iostream>

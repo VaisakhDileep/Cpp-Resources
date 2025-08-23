@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 17, December, 2020
-Description : Expressions, Statements and Operators.
+Description : Expressions, statements and operators.
 */
 
 #include<iostream>

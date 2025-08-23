@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, December, 2020
-Description : This program helps to understand the relationship between arrays and pointers in C++.
+Description : Relationship between arrays and pointers.
 */
 
 #include<iostream>

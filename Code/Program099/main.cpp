@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 5, February, 2021
-Description : This program helps to understand generic programming using Function Templates in C++.
+Description : Generic programming using template function.
 */
 
 #include<iostream>

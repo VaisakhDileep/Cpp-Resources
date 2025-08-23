@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, October, 2021
-Description : This program helps to understand reinterpret_cast in C++.
+Description : Reinterpret_cast.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, December, 2020
-Description : Function Prototyping.
+Description : Function prototyping.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, December, 2020
-Description : This program helps to understand how to pass pointers to functions in C++.
+Description : Pass pointer to a function.
 */
 
 #include<iostream>

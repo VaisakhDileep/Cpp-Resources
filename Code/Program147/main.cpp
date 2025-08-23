@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 23, November, 2021
-Description : This program helps to understand printf() in C++.
+Description : Printf.
 */
 
 #include<iostream>

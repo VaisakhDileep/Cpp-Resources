@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, January, 2021
-Description : This program helps to understand stack unwinding in C++.
+Description : Stack unwinding.
 */
 
 #include<iostream>

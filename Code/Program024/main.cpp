@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, December, 2020
-Description : Random functions.
+Description : Random function.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 15, December, 2020
-Description : Input and Output stream.
+Description : Input and output stream.
 */
 
 #include<iostream>

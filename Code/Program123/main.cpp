@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 11, August, 2021
-Description : This program helps to understand positive infinity and negative infinity in C++.
+Description : Positive infinity and negative infinity.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, December, 2020
-Description : This program helps to understand pointers in C++.
+Description : Pointer.
 */
 
 #include<iostream>
@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-// A pointers is a variable whose value is an address and this address can be of another variable or a function.
+// A pointer is a variable whose value is an address and this address can be of another variable or a function.
 
 /*
 Syntax for declaring a pointer:

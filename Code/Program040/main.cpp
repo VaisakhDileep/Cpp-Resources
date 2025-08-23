@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 26, December, 2020
-Description : This program helps to understand how to return a pointer from a function in C++.
+Description : Return pointer from a function.
 */
 
 #include<iostream>

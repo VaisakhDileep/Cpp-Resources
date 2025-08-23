@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 7, June, 2021
-Description : This program helps to understand unions in C++.
+Description : Union.
 */
 
 #include<iostream>

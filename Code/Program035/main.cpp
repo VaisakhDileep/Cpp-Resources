@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, December, 2020
-Description : This program helps to understand dynamic memory allocation in C++.
+Description : Dynamic memory allocation.]
 */
 
 #include<iostream>

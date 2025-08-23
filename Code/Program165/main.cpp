@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, February, 2022
-Description : This program helps to understand name mangling in C++.
+Description : Name mangling.
 */
 
 #include<iostream>

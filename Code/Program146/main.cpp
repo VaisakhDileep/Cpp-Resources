@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 20, November, 2021
-Description : This program helps to understand regex_search() with std::match_result<string> in C++.
+Description : Regex_search with std::match_result<string>.
 */
 
 #include<iostream>

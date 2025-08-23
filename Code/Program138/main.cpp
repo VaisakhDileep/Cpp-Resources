@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 24, October, 2021
-Description : This program helps to understand padding in structures in C++.
+Description : Padding in structure.
 */
 
 // This program might be different for different os.

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 11, February, 2023
-Description : This program helps to understand how to declare static variables inside template functions in C++.
+Description : Declare static variables inside template function.
 */
 
 #include<iostream>

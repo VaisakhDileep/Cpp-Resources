@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 27, January, 2021
-Description : This program helps to understand how to create user-defined exception classes in C++.
+Description : Create user-defined exception class.
 */
 
 #include<iostream>

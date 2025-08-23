@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 24, December, 2020
-Description : This program helps to understand recursive functions in C++.
+Description : Recursive function.
 */
 
 #include<iostream>

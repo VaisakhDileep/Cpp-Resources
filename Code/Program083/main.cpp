@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, January, 2021
-Description : This program helps to understand weak_ptr(smart_pointer) in C++.
+Description : Weak_ptr.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 15, November, 2021
-Description : This program helps to understand the ctime library in C++.
+Description : Ctime library.
 */
 
 #include<iostream>

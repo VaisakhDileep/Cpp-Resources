@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 28, January, 2021
-Description : This program helps to understand streams and stream manipulators in C++.
+Description : Stream and stream manipulator.
 */
 
 #include<iostream> // ostream, istream, iostream are declared in this header file.

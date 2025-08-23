@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 25, January, 2021
-Description : This program helps to understand custom deleters(smart_pointer) in C++.
+Description : Custom deleter.
 */
 
 #include<iostream>

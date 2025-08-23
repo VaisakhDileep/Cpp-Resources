@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 23, January, 2021
-Description : This program helps to understand unique_ptr(smart_pointer) in C++.
+Description : Unique_ptr.
 */
 
 #include<iostream>
