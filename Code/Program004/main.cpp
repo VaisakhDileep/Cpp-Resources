@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 15, December, 2020
-Description : This program helps to understand input and output streams in C++.
+Description : Input and Output stream.
 */
 
 #include<iostream>

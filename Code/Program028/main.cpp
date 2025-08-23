@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, December, 2020
-Description : This program helps to understand function overloading in C++ user-defined functions.
+Description : Function Overloading in user-defined function.
 */
 
 #include<iostream>

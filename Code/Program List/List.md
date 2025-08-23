@@ -1,36 +1,36 @@
 # C++ Fundamentals:
 
-Program001: [This program prints "Hello, World!" and demonstrates some of the errors occurred in C++.](../Program001/main.cpp)<br>
-Program002: [This program helps to understand the structure of a C++ program.](../Program002/main.cpp)<br>
-Program003: [This program helps to understand namespaces in C++.](../Program003/main.cpp)<br>
-Program004: [This program helps to understand input and output streams in C++.](../Program004/main.cpp)<br>
-Program005: [This program helps to understand variables and constants in C++.](../Program005/main.cpp)<br>
-Program006: [This program helps to understand arrays in C++.](../Program006/main.cpp)<br>
-Program007: [This program helps to understand vectors in C++.](../Program007/main.cpp)<br>
-Program008: [This program helps to understand expressions, statements and operators in C++.](../Program008/main.cpp)<br>
-Program009: [This program helps to understand if statements in C++.](../Program009/main.cpp)<br>
-Program010: [This program helps to understand switch statements in C++.](../Program010/main.cpp)<br>
-Program011: [This program helps to understand enumerations(enum) in C++.](../Program011/main.cpp)<br>
-Program170: [This program helps to understand enum class in C++](../Program170/main.cpp)<br>
-Program012: [This program helps to understand conditional operator(?:) in C++.](../Program012/main.cpp)<br>
-Program013: [This program helps to understand for loops in C++.](../Program013/main.cpp)<br>
-Program014: [This program helps to understand while loops in C++.](../Program014/main.cpp)<br>
-Program015: [This program helps to understand do-while loops in C++.](../Program015/main.cpp)<br>
-Program016: [This program helps to understand break and continue statement in C++.](../Program016/main.cpp)<br>
-Program017: [This program helps to understand infinite loops in C++.](../Program017/main.cpp)<br>
-Program018: [This program helps to understand nested loops in C++.](../Program018/main.cpp)<br>
-Program019: [This program helps to understand character functions in C++.](../Program019/main.cpp)<br>
-Program020: [This program helps to understand C-style strings in C++.](../Program020/main.cpp)<br>
-Program021: [This program helps to understand C-style string functions in C++.](../Program021/main.cpp)<br>
-Program022: [This program helps to understand C++ strings.](../Program022/main.cpp)<br>
-Program023:[math] [This program helps to understand math functions in C++.](../Program023/main.cpp)<br>
-Program024: [This program helps to understand random functions in C++.](../Program024/main.cpp)<br>
-Program025: [This program helps to understand how to define functions in C++.](../Program025/main.cpp)<br>
-Program026: [This program helps to understand function prototypes in C++.](../Program026/main.cpp)<br>
-Program027: [This program helps to understand default argument values in C++ user-defined functions.](../Program027/main.cpp)<br>
-Program028: [This program helps to understand function overloading in C++ user-defined functions.](../Program028/main.cpp)<br>
-Program029: [This program helps to understand how to pass arrays to user-defined functions in C++.](../Program029/main.cpp)<br>
-Program030: [This program helps to understand pass by reference in user-defined functions in C++.](../Program030/main.cpp)<br>
+Program001: [Print "Hello, World!" and demonstrate some of the errors in C++.](../Program001/main.cpp)<br>
+Program002: [Structure of a C++ program.](../Program002/main.cpp)<br>
+Program003: [Namespace.](../Program003/main.cpp)<br>
+Program004: [Input and Output stream.](../Program004/main.cpp)<br>
+Program005: [Variables and Constants.](../Program005/main.cpp)<br>
+Program006: [Array.](../Program006/main.cpp)<br>
+Program007: [Vector.](../Program007/main.cpp)<br>
+Program008: [Expressions, Statements and Operators.](../Program008/main.cpp)<br>
+Program009: [If statement.](../Program009/main.cpp)<br>
+Program010: [Switch statement.](../Program010/main.cpp)<br>
+Program011: [Enumeration(enum).](../Program011/main.cpp)<br>
+Program170: [Enum class.](../Program170/main.cpp)<br>
+Program012: [Conditional operator(?:).](../Program012/main.cpp)<br>
+Program013: [For loop.](../Program013/main.cpp)<br>
+Program014: [While loop.](../Program014/main.cpp)<br>
+Program015: [Do-while loop.](../Program015/main.cpp)<br>
+Program016: [Break and Continue statement.](../Program016/main.cpp)<br>
+Program017: [Infinite loop.](../Program017/main.cpp)<br>
+Program018: [Nested loop.](../Program018/main.cpp)<br>
+Program019: [Character functions.](../Program019/main.cpp)<br>
+Program020: [C-style string.](../Program020/main.cpp)<br>
+Program021: [C-style string functions.](../Program021/main.cpp)<br>
+Program022: [C++ string.](../Program022/main.cpp)<br>
+Program023:[math] [Math functions.](../Program023/main.cpp)<br>
+Program024: [Random functions.](../Program024/main.cpp)<br>
+Program025: [Define a function.](../Program025/main.cpp)<br>
+Program026: [Function Prototyping.](../Program026/main.cpp)<br>
+Program027: [Default argument value in user-defined function.](../Program027/main.cpp)<br>
+Program028: [Function Overloading in user-defined function.](../Program028/main.cpp)<br>
+Program029: [Pass arrays to user-defined function.](../Program029/main.cpp)<br>
+Program030: [Pass by Reference in user-defined function.](../Program030/main.cpp)<br>
 Program031: [This program helps to understand scope rules in C++.](../Program031/main.cpp)<br>
 Program032: [This program helps to understand inline functions in C++.](../Program032/main.cpp)<br>
 Program033: [This program helps to understand recursive functions in C++.](../Program033/main.cpp)<br>

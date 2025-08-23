@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, December, 2020
-Description : This program helps to understand random functions in C++.
+Description : Random functions.
 */
 
 #include<iostream>

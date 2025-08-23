@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 19, December, 2020
-Description : This program helps to understand while loops in C++.
+Description : While loop.
 */
 
 #include<iostream>

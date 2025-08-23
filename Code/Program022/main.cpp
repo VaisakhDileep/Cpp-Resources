@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 21, December, 2020
-Description : This program helps to understand C++ strings.
+Description : C++ string.
 */
 
 #include<iostream>

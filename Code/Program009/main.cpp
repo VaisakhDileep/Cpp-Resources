@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 18, December, 2020
-Description : This program helps to understand if statements in C++..
+Description : If statement.
 */
 
 #include<iostream>

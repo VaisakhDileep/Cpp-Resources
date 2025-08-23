@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 7, November, 2022
-Description : This program helps to understand enum class in C++
+Description : Enum class.
 */
 
 #include<iostream>

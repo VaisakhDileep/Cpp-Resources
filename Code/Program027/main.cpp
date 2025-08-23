@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, December, 2020
-Description : This program helps to understand default argument values in C++ user-defined functions.
+Description : Default argument value in user-defined function.
 */
 
 #include<iostream>

@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 16, December, 2020
-Description : This program helps to understand arrays in C++.
+Description : Array.
 */
 
 #include<iostream>

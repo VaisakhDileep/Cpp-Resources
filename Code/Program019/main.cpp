@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 20, December, 2020
-Description : This program helps to understand character functions in C++.
+Description : Character functions.
 */
 
 #include<iostream>

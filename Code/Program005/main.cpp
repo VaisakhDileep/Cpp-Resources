@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 15, December, 2020
-Description : This program helps to understand variables and constants in C++.
+Description : Variables and Constants.
 */
 
 #include<iostream>

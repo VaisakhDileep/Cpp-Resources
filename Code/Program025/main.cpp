@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 22, December, 2020
-Description : This program helps to understand how to define functions in C++.
+Description : Define a function.
 */
 
 #include<iostream>

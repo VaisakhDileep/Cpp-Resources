@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 14, December, 2020
-Description : This program helps to understand the structure of a C++ program.
+Description : Structure of a C++ program.
 */
 
 // Preprocessor: Preprocessor processes the source code before the compiler sees it. Preprocessor removes all the comments and looks for the preprocessor directive. Preprocessor does not understand C++.

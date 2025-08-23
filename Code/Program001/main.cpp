@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 13, December, 2020
-Description : This program prints "Hello, World!" and demonstrates some of the errors occurred in C++.
+Description : Print "Hello, World!" and demonstrate some of the errors in C++.
 */
 
 #include<iostream> // This library helps to include input and output in our program, it is a preprocessor directive.

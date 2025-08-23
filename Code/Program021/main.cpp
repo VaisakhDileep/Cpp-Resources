@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 20, December, 2020
-Description : This program helps to understand C-style string functions in C++.
+Description : C-style string functions.
 */
 
 #include<iostream>

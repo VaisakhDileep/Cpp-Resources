@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 17, December, 2020
-Description : This program helps to understand expressions, statements and operators in C++.
+Description : Expressions, Statements and Operators.
 */
 
 #include<iostream>

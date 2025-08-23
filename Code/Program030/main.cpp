@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 23, December, 2020
-Description : This program helps to understand pass by reference in user-defined functions in C++.
+Description : Pass by Reference in user-defined function.
 */
 
 #include<iostream>

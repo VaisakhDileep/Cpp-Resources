@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 18, December, 2020
-Description : This program helps to understand switch statements in C++.
+Description : Switch statement.
 */
 
 #include<iostream>

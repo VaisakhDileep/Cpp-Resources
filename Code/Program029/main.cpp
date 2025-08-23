@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 23, December, 2020
-Description : This program helps to understand how to pass arrays to user-defined functions in C++.
+Description : Pass arrays to user-defined function.
 */
 
 #include<iostream>

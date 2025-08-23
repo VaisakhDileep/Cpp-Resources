@@ -1,7 +1,7 @@
 /*
 Created by  : Vaisakh Dileep
 Date        : 20, December, 2020
-Description : This program helps to understand C-style strings in C++.
+Description : C-style string.
 */
 
 #include<iostream>
